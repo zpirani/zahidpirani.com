@@ -11,8 +11,8 @@
   --surface-2: #252730;
   --surface-3: #2D2F3C;
   --ink:       #EDEDF2;
-  --muted:     #A0A0BC; /* body copy — readable on dark bg */
-  --muted-lt:  #3A3C4E;
+  --muted:     #ABABC4; /* body copy */
+  --muted-lt:  #6E7090; /* labels, metadata, section numbers */
   --rule:      #23252F;
 
   --accent:    #22D3EE;
