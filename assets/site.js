@@ -3,64 +3,43 @@
   const inWork = location.pathname.includes('/work/');
   const root = inWork ? '../' : '';
 
+  const LOGO = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 26.8996 26.5881" width="26" height="26" aria-hidden="true" style="flex-shrink:0;display:block">
+    <defs>
+      <clipPath id="zp-c0"><rect width="26.8996" height="26.5881"/></clipPath>
+      <clipPath id="zp-c1"><rect width="200.629" height="90.3555" transform="translate(-87.5151 -29.9961)"/></clipPath>
+    </defs>
+    <g clip-path="url(#zp-c0)"><g clip-path="url(#zp-c1)">
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 1.11679 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 22.6842 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 44.2517 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 65.8373 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 87.4044 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 108.99 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 130.558 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 152.125 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 173.687 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 195.25 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 216.812 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 238.375 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 259.937 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 -20.9084 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 -42.9339 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+      <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 -64.9594 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
+    </g></g>
+  </svg>`;
+
   const nav = `
 <nav class="top">
   <div class="inner">
     <a href="${root}index.html" class="mark">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 26.8996 26.5881" width="26" height="26" aria-hidden="true" style="flex-shrink:0;display:block">
-        <defs>
-          <clipPath id="zp-c0"><rect width="26.8996" height="26.5881"/></clipPath>
-          <clipPath id="zp-c1"><rect width="200.629" height="90.3555" transform="translate(-87.5151 -29.9961)"/></clipPath>
-        </defs>
-        <g clip-path="url(#zp-c0)"><g clip-path="url(#zp-c1)">
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 1.11679 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 22.6842 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 44.2517 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 65.8373 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 87.4044 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 108.99 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 130.558 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 152.125 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 173.687 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 195.25 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 216.812 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 238.375 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 259.937 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 -20.9084 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 -42.9339 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-          <line stroke="currentColor" stroke-width="9.08869" transform="matrix(-0.707107 0.707107 -0.575391 -0.817878 -64.9594 -46.1191)" x2="162.474" y1="-4.54434" y2="-4.54434"/>
-        </g></g>
-      </svg>
+      ${LOGO}
       <span>Zahid Pirani</span>
     </a>
     <ul class="links" id="nav-links">
       <li><a href="${root}index.html" data-p="index">Work</a></li>
-      <li class="dropdown">
-        <a data-p="shell">Shell</a>
-        <ul class="dropdown-menu">
-          <li><a href="${root}work/shell-tpc.html">Terminal Performance Center</a></li>
-          <li><a href="${root}work/orion.html">ORION — Inventory Intelligence</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a data-p="axi">Axi</a>
-        <ul class="dropdown-menu">
-          <li><a href="${root}work/atp-mobile.html">ATP Mobile</a></li>
-          <li><a href="${root}work/atp-web.html">ATP Web</a></li>
-          <li><a href="${root}work/axi-crypto.html">Axi Crypto</a></li>
-          <li><a href="${root}work/axi-design-system.html">Design System</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a data-p="goldpesa">GoldPesa</a>
-        <ul class="dropdown-menu">
-          <li><a href="${root}work/goldpesa-uniswap.html">Uniswap DApp</a></li>
-          <li><a href="${root}work/goldpesa-staking.html">Staking Contract</a></li>
-          <li><a href="${root}work/goldpesa-polygon.html">Polygon Bridge</a></li>
-        </ul>
-      </li>
       <li><a href="${root}about.html" data-p="about">About</a></li>
       <li><a href="${root}skills.html" data-p="skills">Skills</a></li>
+      <li class="mobile-cta"><a href="mailto:zahid@zpirani.com">Get in touch →</a></li>
     </ul>
     <a href="mailto:zahid@zpirani.com" class="cta">Get in touch</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -101,12 +80,14 @@
     revealEls.forEach(el => observer.observe(el));
   }
 
-  // active state
+  // Active state — "Work" is active on all /work/* pages too
   document.querySelectorAll('nav.top a[data-p]').forEach(a => {
-    if (a.dataset.p === here) a.classList.add('active');
+    if (a.dataset.p === here || (inWork && a.dataset.p === 'index')) {
+      a.classList.add('active');
+    }
   });
 
-  // nav shadow on scroll
+  // Nav border on scroll
   const navEl = document.querySelector('nav.top');
   if (navEl) {
     const onScroll = () => navEl.classList.toggle('scrolled', window.scrollY > 8);
@@ -114,7 +95,7 @@
     onScroll();
   }
 
-  // scroll progress bar (case study pages only)
+  // Scroll progress bar (case study pages only)
   if (document.querySelector('.cs-hero')) {
     const bar = document.createElement('div');
     bar.className = 'progress-bar';
@@ -125,7 +106,7 @@
     }, { passive: true });
   }
 
-  // mobile toggle
+  // Mobile toggle
   const toggle = document.getElementById('nav-toggle');
   const links  = document.getElementById('nav-links');
   if (toggle && links) {
@@ -136,17 +117,8 @@
       document.body.style.overflow = open ? 'hidden' : '';
     });
 
-    // mobile: tap dropdown parent to expand sub-items
-    links.querySelectorAll('.dropdown > a').forEach(a => {
-      a.addEventListener('click', e => {
-        if (window.innerWidth <= 960) {
-          e.preventDefault();
-          a.closest('.dropdown').classList.toggle('open');
-        }
-      });
-    });
-
-    links.querySelectorAll('a:not(.dropdown > a)').forEach(a => {
+    // Close on any link click
+    links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         links.classList.remove('open');
         toggle.classList.remove('open');
