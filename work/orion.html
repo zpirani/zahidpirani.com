@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ORION — Zahid Pirani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div id="site-nav"></div>
+
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="tag accent">Shell · 2025–Present</span>
+      <span class="tag accent" style="margin-left:8px;">Real-Time Data</span>
+      <span class="tag accent" style="margin-left:8px;">Trading Tools</span>
+      <span class="tag accent" style="margin-left:8px;">Databricks</span>
+    </div>
+    <h1>ORION — Inventory Intelligence Dashboard</h1>
+    <p class="lead">A real-time terminal inventory platform for Shell's trading and scheduling teams. ORION replaced fragmented, manually assembled Supply updates with a live Databricks-fed view of customer positions, movements, and constraints — refreshed every 15 minutes.</p>
+    <div class="cs-meta">
+      <div class="meta-item"><label>Company</label><span>Shell</span></div>
+      <div class="meta-item"><label>Role</label><span>Senior Product Designer</span></div>
+      <div class="meta-item"><label>Users</label><span>Traders, Ops Planners, Terminal Managers</span></div>
+      <div class="meta-item"><label>MVP Scope</label><span>Carson & Sewaren Terminals</span></div>
+      <div class="meta-item"><label>Data Layer</label><span>Databricks · 15-min refresh</span></div>
+    </div>
+  </div>
+</section>
+
+
+<div class="cs-hero-img">
+  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&h=560&fit=crop&auto=format&q=80" alt="ORION — real-time inventory intelligence dashboard" loading="lazy">
+</div>
+
+<div class="cs-body">
+  <div class="wrap-narrow">
+
+    <h2>The Business Problem</h2>
+    <p>Traders and schedulers at Shell depended on the Supply team for inventory and constraint updates. Every time a trader needed to know whether a customer had enough LNG to fulfil an upcoming deal, they had to contact Supply, wait for a response, and work from information that was already out of date by the time it arrived.</p>
+    <p>This created a cascade of problems: slower decision-making, increased operational risk, and key insights — movements, constraints, available-to-sell positions — scattered across systems and communications channels with no single source of truth.</p>
+
+    <h2>Strategic Objective</h2>
+    <p>Provide a single source of truth that accelerates decisions, reduces risk, and improves utilisation by surfacing current and forecast inventory, movements, constraints, and available-to-sell (ATS) positions in one place — in near real-time.</p>
+
+    <h2>The Solution</h2>
+    <p>ORION aggregates operational terminal data from Databricks and presents it as a set of intuitive dashboard views. A trader opening ORION can instantly see:</p>
+    <ul>
+      <li>Current inventory volumes (in bbl) by customer, ranked and filterable by product</li>
+      <li>Total terminal capacity vs. utilisation, with free capacity and ullage indicators</li>
+      <li>Receipts, withdrawals, and pipeline transfers — with ETA/ETD and inventory impact</li>
+      <li>Customer-level storage balances and constraints (heel/min/max/maintenance)</li>
+      <li>7 and 30-day inventory forecast with projected breach alerts</li>
+      <li>Available-to-sell (ATS) positions — updated every 15 minutes from Databricks</li>
+    </ul>
+
+    <h3>Example Scenario</h3>
+    <p>A trader needs to confirm whether Customer A at Carson Terminal has enough LNG to fulfil an upcoming deal. Instead of contacting Supply, the trader opens ORION, reviews current inventory, checks expected inflows and outflows, and confirms whether the customer is at risk of breaching min/max storage limits — in under two minutes, without a single email sent.</p>
+
+    <div class="cs-stat-row">
+      <div class="cs-stat">
+        <div class="num">~70%</div>
+        <div class="label">Target reduction in Supply data requests</div>
+      </div>
+      <div class="cs-stat">
+        <div class="num">~40%</div>
+        <div class="label">Target improvement in decision cycle time</div>
+      </div>
+      <div class="cs-stat">
+        <div class="num">95%+</div>
+        <div class="label">Target ATS accuracy</div>
+      </div>
+    </div>
+
+    <h2>Core Dashboard Views</h2>
+    <p>The MVP comprises five interconnected views, each answering a distinct question a trader or planner faces during their day:</p>
+    <ul>
+      <li><strong>Customer Inventory View</strong> — ranked horizontal bar chart by customer, filterable by product (LNG/LPG), with customer-level KPIs: contracted vs. actual, min, max, and alerts</li>
+      <li><strong>Product Inventory View</strong> — donut chart for product splits, volume cards, and day-by-day stock movement</li>
+      <li><strong>Forecast & Constraints View</strong> — trend line with projected breach alerts and nomination pipeline (incoming vs. outgoing)</li>
+      <li><strong>Capacity & Utilisation View</strong> — total capacity, utilisation %, free capacity, and max daily drawdown with gauges and mini charts per tank</li>
+      <li><strong>Movements View</strong> — vessel arrivals and quantities, truck/pipeline in/outflow, customer-level deltas, and estimated completion times</li>
+    </ul>
+
+    <h2>Technology</h2>
+    <p>Databricks serves as the single source of truth for all inventory data, with a 15-minute refresh rate across all views. The MVP visibility model gives all users access to all customer volumes, with a more granular RBAC model planned for future phases.</p>
+
+    <h2>Outcome</h2>
+    <p>ORION gives Shell's trading and scheduling teams a fundamentally faster and safer way to work. By removing the dependency on manual Supply updates and replacing it with a live, accurate dashboard, the platform frees traders to focus on making decisions rather than chasing data. Success will be measured by fewer Supply requests, faster decision cycles, improved ATS accuracy, and fewer last-minute operational escalations.</p>
+
+  </div>
+</div>
+
+<section class="cs-next">
+  <div class="inner">
+    <div>
+      <p>Next case study</p>
+      <h3>ATP Mobile — Axi Trading →</h3>
+    </div>
+    <a href="atp-mobile.html" class="btn btn-dark">View →</a>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

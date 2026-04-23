@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Skills — Zahid Pirani</title>
+<meta name="description" content="Skills, tools, and domains — Zahid Pirani, Senior Product Designer based in London.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .skills-hero { padding: 88px 0 64px; border-bottom: 1px solid var(--rule); }
+  .skills-hero h1 {
+    font-size: clamp(52px, 7vw, 96px); font-weight: 700;
+    letter-spacing: -0.04em; margin-bottom: 24px; line-height: 0.92;
+  }
+  .skills-hero p { font-size: 16px; color: var(--muted); line-height: 1.78; max-width: 52ch; }
+
+  .skills-body { padding: 88px 0; }
+
+  .sk-section { margin-bottom: 80px; padding-bottom: 80px; border-bottom: 1px solid var(--rule); }
+  .sk-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .sk-label {
+    font-size: 10px; font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-lt);
+    font-weight: 400; margin-bottom: 44px;
+  }
+
+  /* Skill groups grid */
+  .sk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 48px; }
+  @media (max-width: 900px) { .sk-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 580px) { .sk-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+  .sk-group h3 {
+    font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700;
+    margin-bottom: 16px; color: var(--ink);
+  }
+  .sk-group ul { display: grid; gap: 8px; }
+  .sk-group ul li {
+    font-size: 14px; color: var(--muted); padding-left: 16px;
+    position: relative; line-height: 1.5;
+  }
+  .sk-group ul li::before {
+    content: ""; position: absolute; left: 0; top: 9px;
+    width: 5px; height: 1px; background: var(--accent);
+  }
+
+  /* Domains — pill style */
+  .domain-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+  .domain-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 18px; font-size: 13px; font-weight: 500;
+    background: var(--surface); border: 1px solid var(--rule);
+    color: var(--ink); transition: border-color 0.18s, box-shadow 0.18s;
+  }
+  .domain-pill:hover { border-color: var(--muted-lt); }
+  .domain-pill .dot {
+    width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+  }
+  .dot-navy { background: var(--accent); }
+  .dot-green { background: var(--green); }
+  .dot-gold  { background: #C9960C; }
+
+  /* Numbers strip */
+  .numbers-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: var(--rule);
+    border: 1px solid var(--rule); margin-bottom: 64px;
+  }
+  @media (max-width: 700px) { .numbers-strip { grid-template-columns: repeat(2, 1fr); } }
+  .number-cell {
+    background: var(--surface); padding: 32px 28px;
+    transition: background 0.2s;
+  }
+  .number-cell:hover { background: var(--accent-lt); }
+  .number-cell .num {
+    font-size: 40px; font-weight: 700; letter-spacing: -0.04em;
+    color: var(--accent); letter-spacing: -0.02em; line-height: 1;
+    margin-bottom: 8px;
+  }
+  .number-cell .lbl { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+  /* Tool chips */
+  .tools-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tool-chip {
+    padding: 7px 14px; font-size: 12.5px;
+    background: var(--tag-bg); color: var(--ink);
+    font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em;
+    border: 1px solid transparent; transition: border-color 0.18s, background 0.18s;
+  }
+  .tool-chip:hover { background: var(--surface); border-color: var(--rule); }
+
+  /* Regulatory badges */
+  .reg-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .reg-badge {
+    padding: 6px 14px; font-size: 11px; font-weight: 500;
+    background: var(--accent-lt); color: var(--accent);
+    font-family: 'JetBrains Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+
+<section class="skills-hero">
+  <div class="wrap">
+    <h1>Skills &amp;<br>Expertise.</h1>
+    <p>Product design across energy, trading, fintech, and Web3 — from systems thinking and UX research to shipped products used globally.</p>
+  </div>
+</section>
+
+<div class="skills-body">
+  <div class="wrap">
+
+    <!-- Numbers -->
+    <div class="numbers-strip">
+      <div class="number-cell">
+        <div class="num">8+</div>
+        <div class="lbl">Years designing complex products</div>
+      </div>
+      <div class="number-cell">
+        <div class="num">150+</div>
+        <div class="lbl">Countries where products are live</div>
+      </div>
+      <div class="number-cell">
+        <div class="num">100+</div>
+        <div class="lbl">Research participants across studies</div>
+      </div>
+      <div class="number-cell">
+        <div class="num">4</div>
+        <div class="lbl">Engineering teams led simultaneously</div>
+      </div>
+    </div>
+
+    <!-- Design Skills -->
+    <div class="sk-section">
+      <div class="sk-label">Design</div>
+      <div class="sk-grid">
+        <div class="sk-group">
+          <h3>Strategy &amp; Research</h3>
+          <ul>
+            <li>Product Strategy</li>
+            <li>UX Research</li>
+            <li>Usability Testing</li>
+            <li>Requirements Elicitation</li>
+            <li>User Personas &amp; Journey Mapping</li>
+            <li>PRD Writing</li>
+          </ul>
+        </div>
+        <div class="sk-group">
+          <h3>Craft</h3>
+          <ul>
+            <li>Interaction Design</li>
+            <li>Information Architecture</li>
+            <li>Data Visualisation</li>
+            <li>Prototyping &amp; Handoff</li>
+            <li>Design Systems</li>
+            <li>Responsive &amp; Adaptive UI</li>
+          </ul>
+        </div>
+        <div class="sk-group">
+          <h3>Specialisms</h3>
+          <ul>
+            <li>Real-Time Dashboards</li>
+            <li>Trading Interfaces</li>
+            <li>Complex Onboarding Flows</li>
+            <li>Role-Based Navigation</li>
+            <li>Localisation (12 languages)</li>
+            <li>KYC / Compliance UX</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collaboration -->
+    <div class="sk-section">
+      <div class="sk-label">Collaboration &amp; Leadership</div>
+      <div class="sk-grid">
+        <div class="sk-group">
+          <h3>Leadership</h3>
+          <ul>
+            <li>Team Leadership (3 designers)</li>
+            <li>Cross-Functional Leadership</li>
+            <li>Design &amp; Engineering Alignment</li>
+            <li>Backlog Prioritisation</li>
+          </ul>
+        </div>
+        <div class="sk-group">
+          <h3>Process</h3>
+          <ul>
+            <li>Agile / Scrum</li>
+            <li>Workshop Facilitation</li>
+            <li>Stakeholder Management</li>
+            <li>Client Relationship Management</li>
+          </ul>
+        </div>
+        <div class="sk-group">
+          <h3>Delivery</h3>
+          <ul>
+            <li>iOS · Android · Web</li>
+            <li>Multi-region Product Delivery</li>
+            <li>Design System Governance</li>
+            <li>Component Library Maintenance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="sk-section">
+      <div class="sk-label">Tools</div>
+      <div class="tools-list">
+        <span class="tool-chip">Figma</span>
+        <span class="tool-chip">FigJam</span>
+        <span class="tool-chip">Notion</span>
+        <span class="tool-chip">Jira</span>
+        <span class="tool-chip">Confluence</span>
+        <span class="tool-chip">Maze</span>
+        <span class="tool-chip">Hotjar</span>
+        <span class="tool-chip">Miro</span>
+        <span class="tool-chip">Databricks</span>
+        <span class="tool-chip">HTML / CSS</span>
+        <span class="tool-chip">Git</span>
+      </div>
+    </div>
+
+    <!-- Domains -->
+    <div class="sk-section">
+      <div class="sk-label">Domains</div>
+      <div class="domain-grid">
+        <div class="domain-pill"><span class="dot dot-navy"></span>Energy &amp; Commodities</div>
+        <div class="domain-pill"><span class="dot dot-navy"></span>LNG &amp; Terminal Operations</div>
+        <div class="domain-pill"><span class="dot dot-navy"></span>Retail Trading &amp; CFDs</div>
+        <div class="domain-pill"><span class="dot dot-navy"></span>Forex &amp; Derivatives</div>
+        <div class="domain-pill"><span class="dot dot-gold"></span>DeFi &amp; Web3</div>
+        <div class="domain-pill"><span class="dot dot-gold"></span>ERC20 Tokens</div>
+        <div class="domain-pill"><span class="dot dot-green"></span>Fintech</div>
+        <div class="domain-pill"><span class="dot dot-green"></span>Banking</div>
+        <div class="domain-pill"><span class="dot dot-navy"></span>Crypto &amp; Perpetual Futures</div>
+        <div class="domain-pill"><span class="dot dot-navy"></span>Cross-Chain Bridges</div>
+      </div>
+
+      <div style="margin-top: 40px;">
+        <div class="sk-label" style="margin-bottom: 16px;">Regulatory Environments</div>
+        <div class="reg-list">
+          <span class="reg-badge">FCA</span>
+          <span class="reg-badge">CySEC</span>
+          <span class="reg-badge">ASIC</span>
+          <span class="reg-badge">DFSA</span>
+          <span class="reg-badge">FMA</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="sk-section">
+      <div class="sk-label">Education</div>
+      <div>
+        <p style="font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 700; color: var(--ink); margin-bottom: 6px; line-height: 1.3;">Bachelor of Fine Arts — Graphic Design</p>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 4px;">Minor: Studio Photography</p>
+        <p style="font-size: 14px; color: var(--muted);">University of California, Los Angeles (UCLA)</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="padding: 56px 0 0;">
+      <p style="font-size: 15px; color: var(--muted); margin-bottom: 20px; max-width: 52ch;">Based in London. Open to Senior and Lead Product Designer roles in Energy, Energy Trading, Fintech, Crypto, and Banking.</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="mailto:zahid@zpirani.com" class="btn btn-dark">Email me →</a>
+        <a href="https://linkedin.com/in/zahidpirani" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

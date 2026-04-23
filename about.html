@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>About — Zahid Pirani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .about-hero { padding: 88px 0 64px; border-bottom: 1px solid var(--rule); }
+  .about-hero h1 {
+    font-size: clamp(52px, 7vw, 96px); font-weight: 700;
+    letter-spacing: -0.04em; margin-bottom: 28px; line-height: 0.92;
+  }
+  .about-hero p { font-size: 16px; color: var(--muted); line-height: 1.78; max-width: 56ch; }
+
+  .about-body { padding: 88px 0; }
+  .about-section { margin-bottom: 80px; padding-bottom: 80px; border-bottom: 1px solid var(--rule); }
+  .about-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .about-section > h2 {
+    font-size: 10px; font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted-lt); font-weight: 400; margin-bottom: 48px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .exp-item { display: grid; grid-template-columns: 180px 1fr; gap: 52px; margin-bottom: 56px; }
+  @media (max-width: 700px) { .exp-item { grid-template-columns: 1fr; gap: 14px; } }
+  .exp-item .exp-meta .company { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--ink); }
+  .exp-item .exp-meta .period { font-size: 10px; color: var(--muted-lt); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.1em; margin-bottom: 4px; text-transform: uppercase; }
+  .exp-item .exp-meta .location { font-size: 12px; color: var(--muted-lt); }
+  .exp-item .exp-content .role { font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--ink); letter-spacing: -0.01em; }
+  .exp-item .exp-content ul { display: grid; gap: 10px; }
+  .exp-item .exp-content ul li { position: relative; padding-left: 18px; font-size: 14px; color: var(--muted); line-height: 1.72; }
+  .exp-item .exp-content ul li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+
+  .skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 40px 52px; }
+  @media (max-width: 700px) { .skills-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .skill-group h3 { font-size: 12px; font-weight: 600; margin-bottom: 16px; letter-spacing: 0.02em; color: var(--ink); }
+  .skill-group ul { display: grid; gap: 9px; }
+  .skill-group ul li { font-size: 13px; color: var(--muted); padding-left: 14px; position: relative; line-height: 1.5; }
+  .skill-group ul li::before { content: ""; position: absolute; left: 0; top: 9px; width: 5px; height: 1px; background: var(--muted-lt); }
+
+  .edu-item { margin-bottom: 28px; }
+  .edu-item .degree { font-weight: 600; font-size: 15px; margin-bottom: 6px; color: var(--ink); }
+  .edu-item .school { font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+
+<section class="about-hero">
+  <div class="wrap">
+    <h1>Senior Product Designer.</h1>
+    <p>8+ years designing complex products for energy, trading, and fintech — from real-time dashboards for Shell's global terminal business to trading platforms used by hundreds of thousands of clients across 150+ countries. I specialise in making complex systems legible, and high-stakes decisions faster.</p>
+  </div>
+</section>
+
+<div class="about-body">
+  <div class="wrap">
+
+    <div class="about-section">
+      <h2>Experience</h2>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="company">Shell</div>
+          <div class="period">Nov 2025 – Present</div>
+          <div class="location">London, UK</div>
+        </div>
+        <div class="exp-content">
+          <div class="role">Senior Product Designer — Terminal & LNG Business</div>
+          <ul>
+            <li>Led design for the Terminal Performance Center (TPC), unifying operational and financial data for Shell's 100+ terminal and LNG businesses via Databricks</li>
+            <li>Designed ORION — a real-time inventory intelligence dashboard replacing manual Supply updates for traders and schedulers</li>
+            <li>Facilitated requirements workshops to define data capability priorities, translating findings into PRDs and user stories</li>
+            <li>Designed role-based navigation for diverse personas from global portfolio views to terminal asset status</li>
+            <li>Collaborated with BAs, Product Owners, and Engineering to align the backlog with business goals</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="company">Axi</div>
+          <div class="period">Nov 2022 – Nov 2025</div>
+          <div class="location">London, UK</div>
+        </div>
+        <div class="exp-content">
+          <div class="role">Senior Product Designer — Retail Trading</div>
+          <ul>
+            <li>Designed and launched Crypto Perpetual Futures, increasing platform usability scores by 22%</li>
+            <li>Revamped CFD trading interfaces across Forex, Commodities, Indices, Crypto, and Shares</li>
+            <li>Launched a new onboarding flow with streamlined KYC, IDV, and compliance — achieving 2× conversion uplift across Direct, Affiliate, and IB channels</li>
+            <li>Delivered end-to-end journeys for ATP Crypto (iOS, Android), ATP Web, and Client Portal — now live in 150+ countries</li>
+            <li>Led a team of 3 designers across 4 engineering teams in the UK, India, and Philippines</li>
+            <li>Led user research and usability testing with 100+ participants</li>
+            <li>Implemented localisation for 12 languages, expanding global adoption</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="company">GoldPesa</div>
+          <div class="period">Jan 2020 – Oct 2022</div>
+          <div class="location">London, UK</div>
+        </div>
+        <div class="exp-content">
+          <div class="role">Lead Product Designer — Web3 & DeFi</div>
+          <ul>
+            <li>Led design of the GoldPesa DApp to launch GPO, an ERC20 token, and decentralised trading features</li>
+            <li>Designed intuitive Web3 interfaces for bridging, staking, and swapping tokens — contributing to 3,000+ users and $50M market cap in the first 30 days</li>
+            <li>Conducted usability testing with 30+ users, gathering insights that directly shaped feature design</li>
+            <li>Created wireframes, user flows, and personas to align stakeholders and engineers</li>
+            <li>Researched 100+ gold-backed cryptocurrencies to inform product–market fit</li>
+            <li>Won <strong>"Best DeFi Project"</strong> at Crypto Expo Dubai 2022</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Design</h3>
+          <ul>
+            <li>Product Strategy</li>
+            <li>UX Research</li>
+            <li>Information Architecture</li>
+            <li>Interaction Design</li>
+            <li>Data Visualisation</li>
+            <li>Design Systems</li>
+            <li>Prototyping</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Collaboration</h3>
+          <ul>
+            <li>Cross-Functional Leadership</li>
+            <li>Stakeholder Management</li>
+            <li>Workshop Facilitation</li>
+            <li>Requirements Elicitation</li>
+            <li>Agile / Scrum</li>
+            <li>Client Relationship Management</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Tools & Domains</h3>
+          <ul>
+            <li>Figma</li>
+            <li>Energy & Commodities</li>
+            <li>Retail Trading & CFDs</li>
+            <li>DeFi / Web3</li>
+            <li>Regulated Markets (FCA, CySEC, ASIC)</li>
+            <li>iOS · Android · Web</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div class="degree">Bachelor of Fine Arts in Graphic Design · Minor: Studio Photography</div>
+        <div class="school">University of California, Los Angeles (UCLA)</div>
+      </div>
+    </div>
+
+    <div class="about-section" style="border:none;margin-bottom:0;padding-bottom:0;">
+      <h2>Contact</h2>
+      <p style="font-size:15px;color:var(--muted);margin-bottom:16px;">Based in London. Open to Senior Product Designer and Lead Product Designer roles in Energy, Energy Trading, Fintech, Crypto, and Banking.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="mailto:zahid@zpirani.com" class="btn btn-dark">Email me →</a>
+        <a href="https://linkedin.com/in/zahidpirani" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

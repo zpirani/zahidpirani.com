@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Zahid Pirani — Senior Product Designer</title>
+<meta name="description" content="Senior Product Designer with 8+ years designing complex systems for energy, trading, and fintech. Based in London, UK.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+
+/* ── HERO ── */
+.hero {
+  min-height: calc(100vh - 56px);
+  display: flex; flex-direction: column;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+}
+.hero-body {
+  flex: 1; display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 80px 48px 56px;
+}
+@media (max-width: 768px) { .hero-body { padding: 48px 20px 40px; } }
+
+.hero-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 400; color: var(--muted);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 28px;
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-kicker::before {
+  content: ""; display: block; width: 20px; height: 1px; background: var(--accent);
+}
+
+.hero h1 {
+  font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+  font-size: clamp(56px, 9.5vw, 136px);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin-bottom: 52px;
+}
+.hero h1 .accent { color: var(--accent); }
+
+.hero-row {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;
+  flex-wrap: wrap;
+}
+.hero-desc {
+  font-size: 16px; color: var(--muted); line-height: 1.75; max-width: 46ch;
+}
+.hero-ctas { display: flex; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
+
+/* Strip */
+.hero-strip {
+  border-top: 1px solid var(--rule);
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 640px) { .hero-strip { grid-template-columns: repeat(2,1fr); } }
+.hero-strip-cell {
+  padding: 20px 32px; border-right: 1px solid var(--rule);
+  display: flex; flex-direction: column; gap: 7px;
+}
+@media (max-width: 768px) { .hero-strip-cell { padding: 16px 20px; } }
+.hero-strip-cell:last-child { border-right: none; }
+.strip-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-lt);
+}
+.strip-value { font-size: 13px; font-weight: 500; color: var(--ink); line-height: 1.4; }
+.avail { color: var(--green); display: flex; align-items: center; gap: 8px; }
+.avail::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green); flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(52,211,153,0.15);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 3px rgba(52,211,153,0.15); }
+  50%      { box-shadow: 0 0 0 7px rgba(52,211,153,0.04); }
+}
+
+/* ── WORK SECTIONS ── */
+.work-section { border-top: 1px solid var(--rule); }
+
+.section-header {
+  padding: 28px 48px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+@media (max-width: 768px) { .section-header { padding: 20px 20px; } }
+.section-header-left { display: flex; align-items: center; gap: 16px; }
+.section-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 400; color: var(--muted-lt); letter-spacing: 0.08em;
+}
+.section-company {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 18px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink);
+}
+.section-desc {
+  font-size: 12px; color: var(--muted-lt);
+  font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em;
+}
+@media (max-width: 480px) { .section-desc { display: none; } }
+.section-period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--muted-lt); letter-spacing: 0.08em; white-space: nowrap;
+}
+
+/* ── CARD GRID — flat tiles with 1px rule gaps ── */
+.cs-grid {
+  display: grid; grid-template-columns: repeat(2,1fr);
+  gap: 1px; background: var(--rule);
+}
+.cs-grid .cs-card { border-radius: 0; border: none; }
+.cs-grid-3 { grid-template-columns: repeat(3,1fr); }
+
+@media (max-width: 900px) { .cs-grid-3 { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 580px) { .cs-grid, .cs-grid-3 { grid-template-columns: 1fr; } }
+
+.cs-grid .cs-card.featured { grid-column: 1 / -1; }
+@media (max-width: 720px) { .cs-grid .cs-card.featured { flex-direction: column; } }
+
+.cs-card-wide {
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: 1fr 2fr;
+}
+.cs-card-wide .thumb { aspect-ratio: auto; min-height: 220px; }
+.cs-card-wide .card-body { padding: 36px 44px; justify-content: center; border-left: 1px solid var(--rule); }
+@media (max-width: 600px) { .cs-card-wide { grid-template-columns: 1fr; } }
+
+/* ── THUMB GRADIENTS ── */
+.thumb-shell-tpc { background: linear-gradient(145deg, #07101E 0%, #0D2040 50%, #122E5E 100%); }
+.thumb-orion     { background: linear-gradient(145deg, #060C18 0%, #0A1830 50%, #0D2240 100%); }
+.thumb-axi       { background: linear-gradient(145deg, #0C0C10 0%, #131318 100%); }
+.thumb-goldpesa  { background: linear-gradient(145deg, #060E09 0%, #0A1C10 50%, #0F2618 100%); }
+
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="hero-kicker reveal">Senior Product Designer · London, UK</div>
+    <h1 class="reveal reveal-delay-1">Designing<br>complex<br><span class="accent">systems.</span></h1>
+    <div class="hero-row reveal reveal-delay-2">
+      <p class="hero-desc">8+ years turning high-stakes data into clear decisions — real-time terminal operations at Shell, trading platforms across 150+ countries.</p>
+      <div class="hero-ctas">
+        <a href="about.html" class="btn btn-dark">About me</a>
+        <a href="mailto:zahid@zpirani.com" class="btn btn-outline">Get in touch</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-strip reveal reveal-delay-3">
+    <div class="hero-strip-cell">
+      <span class="strip-label">Current</span>
+      <span class="strip-value">Shell — Terminal &amp; LNG</span>
+    </div>
+    <div class="hero-strip-cell">
+      <span class="strip-label">Focus</span>
+      <span class="strip-value">Energy · Trading · Fintech</span>
+    </div>
+    <div class="hero-strip-cell">
+      <span class="strip-label">Experience</span>
+      <span class="strip-value">8+ years</span>
+    </div>
+    <div class="hero-strip-cell">
+      <span class="strip-label">Status</span>
+      <span class="strip-value avail">Open to opportunities</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<!-- SHELL -->
+<section class="work-section">
+  <div class="section-header reveal">
+    <div class="section-header-left">
+      <span class="section-num">01</span>
+      <span class="section-company">Shell</span>
+      <span class="section-desc">Terminal &amp; LNG</span>
+    </div>
+    <span class="section-period">2025 – Present</span>
+  </div>
+  <div class="cs-grid">
+    <a href="work/shell-tpc.html" class="cs-card reveal">
+      <div class="thumb thumb-shell-tpc">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=500&fit=crop&auto=format&q=80" alt="Terminal Performance Center — enterprise data dashboard" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="tag accent">Enterprise UX</span>
+          <span class="tag accent">Data Viz</span>
+          <span class="tag accent">Databricks</span>
+        </div>
+        <h3>Terminal Performance Center</h3>
+        <p>A unified platform giving senior leaders real-time visibility into the operational and financial health of 100+ terminals worldwide — powering decisions on investment, optimisation, and divestment.</p>
+        <span class="rlink">View case study</span>
+      </div>
+    </a>
+    <a href="work/orion.html" class="cs-card reveal reveal-delay-1">
+      <div class="thumb thumb-orion">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=500&fit=crop&auto=format&q=80" alt="ORION inventory intelligence — real-time data" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="tag accent">Real-Time Data</span>
+          <span class="tag accent">Trading Tools</span>
+        </div>
+        <h3>ORION — Inventory Intelligence</h3>
+        <p>A real-time inventory dashboard replacing fragmented Supply updates with a live Databricks-fed single source of truth across customer positions, movements, and constraints.</p>
+        <span class="rlink">View case study</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- AXI -->
+<section class="work-section">
+  <div class="section-header reveal">
+    <div class="section-header-left">
+      <span class="section-num">02</span>
+      <span class="section-company">Axi</span>
+      <span class="section-desc">Retail Trading</span>
+    </div>
+    <span class="section-period">2022 – 2025</span>
+  </div>
+  <div class="cs-grid">
+    <a href="work/atp-mobile.html" class="cs-card reveal">
+      <div class="thumb thumb-axi">
+        <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=900&h=500&fit=crop&auto=format&q=80" alt="ATP Mobile — trading app on iOS and Android" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="tag">iOS · Android</span><span class="tag">Onboarding</span></div>
+        <h3>ATP Mobile</h3>
+        <p>End-to-end mobile trading — adaptive onboarding across 180+ jurisdictions, −35% account setup time, 2× conversion uplift.</p>
+        <span class="rlink">View case study</span>
+      </div>
+    </a>
+    <a href="work/atp-web.html" class="cs-card reveal reveal-delay-1">
+      <div class="thumb thumb-axi">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=900&h=500&fit=crop&auto=format&q=80" alt="ATP Web — CFD trading platform" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="tag">Web App</span><span class="tag">CFD Trading</span></div>
+        <h3>ATP Web</h3>
+        <p>Modular CFD platform redesign across Forex, Commodities, Indices, and Crypto — improving consistency and delivery speed globally.</p>
+        <span class="rlink">View case study</span>
+      </div>
+    </a>
+    <a href="work/axi-crypto.html" class="cs-card reveal reveal-delay-2">
+      <div class="thumb thumb-axi">
+        <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=900&h=500&fit=crop&auto=format&q=80" alt="Axi Crypto — perpetual futures" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="tag">Crypto</span><span class="tag">Perp Futures</span></div>
+        <h3>Axi Crypto</h3>
+        <p>Crypto Perpetual Futures launch — +22% usability score, live in 150+ countries, 100+ research participants.</p>
+        <span class="rlink">View case study</span>
+      </div>
+    </a>
+    <a href="work/axi-design-system.html" class="cs-card reveal reveal-delay-3">
+      <div class="thumb thumb-axi">
+        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=900&h=500&fit=crop&auto=format&q=80" alt="Axi Design System — component library" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="tag">Design System</span><span class="tag">Governance</span></div>
+        <h3>Axi Design System</h3>
+        <p>Scalable design system across 4 engineering teams in 3 countries — enabling faster delivery and cross-team alignment for iOS, Android, Web, and Client Portal.</p>
+        <span class="rlink">View case study</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- GOLDPESA -->
+<section class="work-section">
+  <div class="section-header reveal">
+    <div class="section-header-left">
+      <span class="section-num">03</span>
+      <span class="section-company">GoldPesa</span>
+      <span class="section-desc">Web3 &amp; DeFi</span>
+    </div>
+    <span class="section-period">2020 – 2022</span>
+  </div>
+  <div class="cs-grid">
+    <a href="work/goldpesa-uniswap.html" class="cs-card reveal">
+      <div class="thumb thumb-goldpesa">
+        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?w=900&h=500&fit=crop&auto=format&q=80" alt="GoldPesa Uniswap DApp — gold-backed DeFi" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="tag green">DeFi</span><span class="tag green">Web3</span></div>
+        <h3>GoldPesa Uniswap DApp</h3>
+        <p>Decentralised app for GPO — a gold-backed ERC20 token. 3,000+ users, $50M market cap in 30 days. Best DeFi Project, Crypto Expo Dubai 2022.</p>
+        <span class="rlink">View case study</span>
+      </div>
+    </a>
+    <a href="work/goldpesa-staking.html" class="cs-card reveal reveal-delay-1">
+      <div class="thumb thumb-goldpesa">
+        <img src="https://images.unsplash.com/photo-1605792657660-596af9009e82?w=900&h=500&fit=crop&auto=format&q=80" alt="GoldPesa Staking — token yield" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="tag green">DeFi</span><span class="tag green">Smart Contracts</span></div>
+        <h3>Staking Contract</h3>
+        <p>Staking interface enabling GPO holders to lock tokens and earn yield — contributing to the $50M market cap launch in the first month.</p>
+        <span class="rlink">View case study</span>
+      </div>
+    </a>
+    <a href="work/goldpesa-polygon.html" class="cs-card reveal reveal-delay-2">
+      <div class="thumb thumb-goldpesa">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&h=500&fit=crop&auto=format&q=80" alt="GoldPesa Polygon Bridge — cross-chain" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-tags"><span class="tag green">Cross-Chain</span><span class="tag green">Polygon</span></div>
+        <h3>Polygon Bridge</h3>
+        <p>Cross-chain bridge from Ethereum L1 to Polygon L2 — cutting transaction fees from ~50% of investment value to near-zero.</p>
+        <span class="rlink">View case study</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</body>
+</html>
