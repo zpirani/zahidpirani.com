@@ -26,12 +26,11 @@
       <div class="meta-item"><label>Company</label><span>Shell</span></div>
       <div class="meta-item"><label>Role</label><span>Senior Product Designer</span></div>
       <div class="meta-item"><label>Users</label><span>Traders, Ops Planners, Terminal Managers</span></div>
-      <div class="meta-item"><label>MVP Scope</label><span>Carson & Sewaren Terminals</span></div>
+      <div class="meta-item"><label>MVP Scope</label><span>Carson &amp; Sewaren Terminals</span></div>
       <div class="meta-item"><label>Data Layer</label><span>Databricks · 15-min refresh</span></div>
     </div>
   </div>
 </section>
-
 
 <div class="cs-hero-img">
   <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&h=560&fit=crop&auto=format&q=80" alt="ORION — real-time inventory intelligence dashboard" loading="lazy">
@@ -43,6 +42,17 @@
     <h2>The Business Problem</h2>
     <p>Traders and schedulers at Shell depended on the Supply team for inventory and constraint updates. Every time a trader needed to know whether a customer had enough LNG to fulfil an upcoming deal, they had to contact Supply, wait for a response, and work from information that was already out of date by the time it arrived.</p>
     <p>This created a cascade of problems: slower decision-making, increased operational risk, and key insights — movements, constraints, available-to-sell positions — scattered across systems and communications channels with no single source of truth.</p>
+
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">outlook.office.com / supply-update-request</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=700&fit=crop&auto=format&q=80" alt="Before — manual Supply email requests and outdated spreadsheet data" loading="lazy">
+      </div>
+      <p class="mockup-caption">Before — traders emailing Supply for position data, waiting hours for responses already stale on arrival</p>
+    </div>
 
     <h2>Strategic Objective</h2>
     <p>Provide a single source of truth that accelerates decisions, reduces risk, and improves utilisation by surfacing current and forecast inventory, movements, constraints, and available-to-sell (ATS) positions in one place — in near real-time.</p>
@@ -64,13 +74,24 @@
           <div class="m-dots"><span></span><span></span><span></span></div>
           <div class="m-url">orion.shell.com / inventory / carson</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=700&fit=crop&auto=format&q=80" alt="ORION — customer inventory view showing live volumes and ATS positions" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=700&fit=crop&auto=format&q=80" alt="ORION — customer inventory view with live volumes and ATS positions" loading="lazy">
       </div>
-      <p class="mockup-caption">Customer Inventory View — live volumes, ATS positions, and constraint indicators</p>
+      <p class="mockup-caption">Customer Inventory View — live bbl volumes ranked by customer, with ATS positions refreshed every 15 minutes</p>
     </div>
 
     <h3>Example Scenario</h3>
     <p>A trader needs to confirm whether Customer A at Carson Terminal has enough LNG to fulfil an upcoming deal. Instead of contacting Supply, the trader opens ORION, reviews current inventory, checks expected inflows and outflows, and confirms whether the customer is at risk of breaching min/max storage limits — in under two minutes, without a single email sent.</p>
+
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">orion.shell.com / inventory / carson / customer / A</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1504868584819-f8fcb75b4bbb?w=1200&h=700&fit=crop&auto=format&q=80" alt="ORION — customer-level drill-down showing storage balance and constraints" loading="lazy">
+      </div>
+      <p class="mockup-caption">Customer drill-down — contracted vs. actual, min/max constraints, and upcoming movement impact in one view</p>
+    </div>
 
     <div class="cs-stat-row">
       <div class="cs-stat">
@@ -92,8 +113,8 @@
     <ul>
       <li><strong>Customer Inventory View</strong> — ranked horizontal bar chart by customer, filterable by product (LNG/LPG), with customer-level KPIs: contracted vs. actual, min, max, and alerts</li>
       <li><strong>Product Inventory View</strong> — donut chart for product splits, volume cards, and day-by-day stock movement</li>
-      <li><strong>Forecast & Constraints View</strong> — trend line with projected breach alerts and nomination pipeline (incoming vs. outgoing)</li>
-      <li><strong>Capacity & Utilisation View</strong> — total capacity, utilisation %, free capacity, and max daily drawdown with gauges and mini charts per tank</li>
+      <li><strong>Forecast &amp; Constraints View</strong> — trend line with projected breach alerts and nomination pipeline (incoming vs. outgoing)</li>
+      <li><strong>Capacity &amp; Utilisation View</strong> — total capacity, utilisation %, free capacity, and max daily drawdown with gauges and mini charts per tank</li>
       <li><strong>Movements View</strong> — vessel arrivals and quantities, truck/pipeline in/outflow, customer-level deltas, and estimated completion times</li>
     </ul>
 
@@ -101,11 +122,33 @@
       <div class="mockup-browser">
         <div class="m-bar">
           <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">orion.shell.com / forecast / constraints</div>
+          <div class="m-url">orion.shell.com / forecast / constraints / 30-day</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&h=700&fit=crop&auto=format&q=80" alt="ORION — 7 and 30-day forecast view with breach alerts" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&h=700&fit=crop&auto=format&q=80" alt="ORION — 30-day forecast view with breach alert projections" loading="lazy">
       </div>
-      <p class="mockup-caption">Forecast & Constraints View — projected breach alerts and 30-day inventory trend</p>
+      <p class="mockup-caption">Forecast &amp; Constraints View — 30-day inventory trend with projected breach alerts and nomination pipeline</p>
+    </div>
+
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">orion.shell.com / capacity / carson / utilisation</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1200&h=700&fit=crop&auto=format&q=80" alt="ORION — capacity and utilisation view with per-tank gauges" loading="lazy">
+      </div>
+      <p class="mockup-caption">Capacity &amp; Utilisation View — total capacity vs. fill, free ullage, and per-tank status across the terminal</p>
+    </div>
+
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">orion.shell.com / movements / sewaren / live</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&h=700&fit=crop&auto=format&q=80" alt="ORION — movements view showing vessel arrivals and pipeline flows" loading="lazy">
+      </div>
+      <p class="mockup-caption">Movements View — vessel ETAs, truck and pipeline flows, and customer-level delta in real time</p>
     </div>
 
     <h2>Technology</h2>

@@ -30,7 +30,6 @@
   </div>
 </section>
 
-
 <div class="cs-hero-img">
   <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400&h=560&fit=crop&auto=format&q=80" alt="GoldPesa Polygon Bridge — cross-chain token transfer" loading="lazy">
 </div>
@@ -41,17 +40,61 @@
     <h2>Overview</h2>
     <p>In Q4 2022, GoldPesa introduced the cross-chain bridge between Polygon and Ethereum, using Plasma and PoS security. This enabled GPO token holders to transfer their tokens between chains without incurring third-party risks or being limited by market liquidity — as a two-way transaction channel.</p>
 
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">app.goldpesa.com / bridge</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1622630998477-20aa696ef72b?w=1200&h=700&fit=crop&auto=format&q=80" alt="GoldPesa Bridge — entry point from wallet showing chain selector" loading="lazy">
+      </div>
+      <p class="mockup-caption">Bridge entry — accessible from the wallet dashboard, with chain direction selector and current fee estimate</p>
+    </div>
+
     <h2>The Problem</h2>
     <p>When GPO token holders interact with the Ethereum blockchain, fees are calculated according to GWEI — the level of network congestion at any given moment. In practice, this meant that a $200 investment in GPO could attract $100 in transaction fees, a 50% overhead that made the product economically unviable for smaller holders.</p>
     <p>Upcoming GoldPesa features — including staking programs and LAND multipliers — required users to interact with their tokens regularly. Without a cheaper chain to operate on, frequent interaction was simply too expensive.</p>
+
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">app.goldpesa.com / bridge / why-polygon</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&h=700&fit=crop&auto=format&q=80" alt="GoldPesa — L1 vs L2 cost comparison showing gas fee impact" loading="lazy">
+      </div>
+      <p class="mockup-caption">Gas fee education — plain-language L1 vs L2 comparison showing real cost impact before users decide to bridge</p>
+    </div>
 
     <h2>Ethereum vs. Polygon</h2>
     <p>Ethereum (L1) is a decentralised platform with a Proof of Work consensus mechanism. While secure and established, it carries L1 friction: high gas fees, slower transactions, and higher environmental cost.</p>
     <p>Polygon (L2) is built on top of Ethereum using a Proof of Stake mechanism. As a layer 2 solution, it offers dramatically faster transaction speeds, significantly lower gas fees, and greener interactions — while inheriting Ethereum's underlying security.</p>
     <p>The bridge moves tokens from one blockchain to the other without changing anything about the token itself: the supply, value, and utility remain identical. It simply moves where the computation happens.</p>
 
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">app.goldpesa.com / bridge / ethereum-to-polygon / select</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1200&h=700&fit=crop&auto=format&q=80" alt="GoldPesa Bridge — token and amount selector before initiating transfer" loading="lazy">
+      </div>
+      <p class="mockup-caption">Step 1 — amount selector with live L1 fee estimate and expected L2 arrival time shown upfront</p>
+    </div>
+
     <h2>About the PoS Bridge</h2>
     <p>The Proof of Stake bridge works in two steps: tokens are first sent from the initial network and reach a checkpoint midway through the transfer, before finalising the move to the target network. This ensures security and finality without relying on third-party custody.</p>
+
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">app.goldpesa.com / bridge / ethereum-to-polygon / progress</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1504868584819-f8fcb75b4bbb?w=1200&h=700&fit=crop&auto=format&q=80" alt="GoldPesa Bridge — two-step PoS progress tracker with checkpoint confirmation" loading="lazy">
+      </div>
+      <p class="mockup-caption">Step 2 — two-step PoS progress tracker with checkpoint confirmation, timing, and clear "why this takes longer" explanation</p>
+    </div>
 
     <h2>Design Approach</h2>
     <p>The bridge interface needed to demystify a genuinely complex technical concept for users who were not blockchain-native. The design focused on:</p>
@@ -66,11 +109,11 @@
       <div class="mockup-browser">
         <div class="m-bar">
           <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">app.goldpesa.com / bridge / ethereum-to-polygon</div>
+          <div class="m-url">app.goldpesa.com / bridge / ethereum-to-polygon / complete</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1509909756405-be0199b5558d?w=1200&h=700&fit=crop&auto=format&q=80" alt="GoldPesa Polygon Bridge — cross-chain transfer interface" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?w=1200&h=700&fit=crop&auto=format&q=80" alt="GoldPesa Bridge — successful transfer confirmation with Polygon wallet balance update" loading="lazy">
       </div>
-      <p class="mockup-caption">Bridge interface — two-step PoS transfer with plain-language progress and confirmation states</p>
+      <p class="mockup-caption">Transfer complete — success state confirming GPO arrival on Polygon with updated wallet balance and next-step prompts</p>
     </div>
 
     <h2>Outcome</h2>

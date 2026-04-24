@@ -30,7 +30,6 @@
   </div>
 </section>
 
-
 <div class="cs-hero-img">
   <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&h=560&fit=crop&auto=format&q=80" alt="ATP Web — CFD trading platform" loading="lazy">
 </div>
@@ -41,9 +40,42 @@
     <h2>Overview</h2>
     <p>ATP Web is Axi's browser-based trading platform for retail CFD clients. I led the redesign of the CFD trading interfaces across all markets — Forex, Commodities, Indices, Crypto, and Shares — applying modular design principles to create a more consistent, scalable product.</p>
 
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">trade.axi.com / platform / overview</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1509909756405-be0199b5558d?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — full platform overview showing multi-market layout" loading="lazy">
+      </div>
+      <p class="mockup-caption">Platform overview — unified layout serving Forex, Commodities, Indices, Crypto, and Shares from a single interface</p>
+    </div>
+
     <h2>The Challenge</h2>
     <p>The web platform had grown organically over years, resulting in inconsistent UI patterns across different market types. Traders switching between Forex and Crypto, for example, encountered different interaction models for the same core actions — placing trades, reviewing positions, and managing orders.</p>
     <p>This inconsistency slowed down both users and engineers. Designers were rebuilding similar components from scratch for each market, and the engineering teams across the UK, India, and Philippines were working from inconsistent specs.</p>
+
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">trade.axi.com / platform / forex / EURUSD</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1504868584819-f8fcb75b4bbb?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — Forex market view showing layout inconsistencies before redesign" loading="lazy">
+      </div>
+      <p class="mockup-caption">Before — Forex market view with component patterns that diverged from Crypto and Indices equivalents</p>
+    </div>
+
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">trade.axi.com / platform / crypto / BTCUSD</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — Crypto market view showing different interaction model for same actions" loading="lazy">
+      </div>
+      <p class="mockup-caption">Before — Crypto view using a different order ticket, chart controls, and position display from Forex</p>
+    </div>
 
     <h2>Approach</h2>
     <ul>
@@ -57,15 +89,37 @@
       <div class="mockup-browser">
         <div class="m-bar">
           <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">axi.design / components / order-ticket / specs</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — component audit mapping shared vs. market-specific elements" loading="lazy">
+      </div>
+      <p class="mockup-caption">Component audit — mapping shared interaction patterns vs. market-specific data needs across all asset classes</p>
+    </div>
+
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
           <div class="m-url">trade.axi.com / platform / forex / EURUSD</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1534951009808-76bbe3e18f8a?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — redesigned modular trading interface" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1534951009808-76bbe3e18f8a?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — redesigned unified trading platform after modular redesign" loading="lazy">
       </div>
-      <p class="mockup-caption">After — unified modular layout shared across Forex, Commodities, Indices, Crypto, and Shares</p>
+      <p class="mockup-caption">After — same modular layout, order ticket, and chart controls now shared across every market type</p>
     </div>
 
     <h2>Outcome</h2>
     <p>The modular redesign improved design consistency across all CFD markets and accelerated development speed by reducing rework. The same component foundations were then extended into the ATP Mobile and Axi Design System work.</p>
+
+    <div class="cs-mockup-full reveal">
+      <div class="mockup-browser">
+        <div class="m-bar">
+          <div class="m-dots"><span></span><span></span><span></span></div>
+          <div class="m-url">trade.axi.com / platform / indices / SPX500</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — Indices view using the same shared modular layout" loading="lazy">
+      </div>
+      <p class="mockup-caption">Indices view — same component foundations as Forex and Crypto, adapted for indices-specific data</p>
+    </div>
 
   </div>
 </div>
