@@ -274,7 +274,13 @@ p  { color: var(--muted); line-height: 1.72; }
   flex: 1; display: flex; flex-direction: column;
   border-top: 1px solid var(--rule);
 }
-.cs-card .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.cs-card .card-tags { display: flex; flex-wrap: wrap; gap: 0; margin-bottom: 16px; align-items: center; }
+.cs-card .card-tags span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted-lt); background: none; padding: 0; border: none; border-radius: 0;
+}
+.cs-card .card-tags span + span::before { content: ' · '; margin: 0 2px; color: var(--muted-lt); }
 .cs-card h3 {
   font-size: 17px; font-weight: 600; margin-bottom: 10px;
   line-height: 1.3; letter-spacing: -0.015em; color: var(--ink);
@@ -306,7 +312,13 @@ p  { color: var(--muted); line-height: 1.72; }
   padding: 88px 0 64px;
   border-bottom: 1px solid var(--rule);
 }
-.cs-hero .eyebrow { margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 6px; }
+.cs-hero .eyebrow { margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 0; align-items: center; }
+.cs-hero .eyebrow span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted-lt); background: none; padding: 0; border: none; border-radius: 0;
+}
+.cs-hero .eyebrow span + span::before { content: ' · '; margin: 0 6px; color: var(--muted-lt); }
 .cs-hero h1 {
   font-size: clamp(36px, 5vw, 64px); font-weight: 700;
   max-width: 18ch; margin-bottom: 24px;
