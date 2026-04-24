@@ -437,7 +437,18 @@ p  { color: var(--muted); line-height: 1.72; }
   filter: brightness(0.68) saturate(0.75) contrast(1.08);
 }
 
-/* Phone frame */
+/* Device scene — real device photography, full-bleed */
+.cs-device-scene {
+  border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--rule);
+  box-shadow: 0 24px 72px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.3);
+}
+.cs-device-scene img {
+  display: block; width: 100%; height: auto;
+  max-height: 580px; object-fit: cover; object-position: center;
+}
+
+/* Phone frame (kept for legacy, not used in current case studies) */
 .mockup-phones {
   display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
 }
