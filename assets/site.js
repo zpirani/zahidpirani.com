@@ -37,6 +37,30 @@
     </a>
     <ul class="links" id="nav-links">
       <li><a href="${root}index.html" data-p="index">Work</a></li>
+      <li class="has-drop">
+        <button class="drop-toggle" aria-expanded="false" aria-haspopup="true">Shell <span class="drop-arrow">▾</span></button>
+        <ul class="dropdown">
+          <li><a href="${root}work/shell-tpc.html">Terminal Performance Center</a></li>
+          <li><a href="${root}work/orion.html">ORION — Inventory Intelligence</a></li>
+        </ul>
+      </li>
+      <li class="has-drop">
+        <button class="drop-toggle" aria-expanded="false" aria-haspopup="true">Axi <span class="drop-arrow">▾</span></button>
+        <ul class="dropdown">
+          <li><a href="${root}work/atp-mobile.html">ATP Mobile</a></li>
+          <li><a href="${root}work/atp-web.html">ATP Web</a></li>
+          <li><a href="${root}work/axi-crypto.html">Crypto Trading</a></li>
+          <li><a href="${root}work/axi-design-system.html">Design System</a></li>
+        </ul>
+      </li>
+      <li class="has-drop">
+        <button class="drop-toggle" aria-expanded="false" aria-haspopup="true">GoldPesa <span class="drop-arrow">▾</span></button>
+        <ul class="dropdown">
+          <li><a href="${root}work/goldpesa-uniswap.html">Uniswap Integration</a></li>
+          <li><a href="${root}work/goldpesa-staking.html">Staking Platform</a></li>
+          <li><a href="${root}work/goldpesa-polygon.html">Polygon Bridge</a></li>
+        </ul>
+      </li>
       <li><a href="${root}about.html" data-p="about">About</a></li>
       <li><a href="${root}skills.html" data-p="skills">Skills</a></li>
       <li class="mobile-cta"><a href="mailto:zahid@zpirani.com">Get in touch →</a></li>
@@ -105,6 +129,38 @@
       bar.style.width = (window.scrollY / total * 100) + '%';
     }, { passive: true });
   }
+
+  // Dropdown menus
+  document.querySelectorAll('.drop-toggle').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const li = btn.closest('.has-drop');
+      const isOpen = li.classList.contains('open');
+      // close all others
+      document.querySelectorAll('.has-drop.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.drop-toggle').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        li.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.has-drop.open').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.drop-toggle').setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.has-drop.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.drop-toggle').setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
 
   // Mobile toggle
   const toggle = document.getElementById('nav-toggle');

@@ -9,26 +9,37 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js"></script>
 <style>
 
 /* ── HERO ── */
 .hero {
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - 64px);
   display: flex; flex-direction: column;
   background: var(--bg);
   border-bottom: 1px solid var(--rule);
+  position: relative; overflow: hidden;
 }
+
+/* Canvas circuit animation */
+#hero-canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none; display: block;
+}
+
 .hero-body {
-  flex: 1; display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 80px 48px 56px;
+  flex: 1; display: flex; flex-direction: column; justify-content: center;
+  padding: 96px 48px 64px;
+  position: relative; z-index: 1;
 }
-@media (max-width: 768px) { .hero-body { padding: 48px 20px 40px; } }
+@media (max-width: 768px) { .hero-body { padding: 64px 20px 48px; } }
 
 .hero-kicker {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px; font-weight: 400; color: var(--muted);
   letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   display: flex; align-items: center; gap: 12px;
 }
 .hero-kicker::before {
@@ -42,23 +53,21 @@
   line-height: 0.92;
   letter-spacing: -0.04em;
   color: var(--ink);
-  margin-bottom: 52px;
+  margin-bottom: 36px;
 }
 .hero h1 .accent { color: var(--accent); }
 
-.hero-row {
-  display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;
-  flex-wrap: wrap;
-}
 .hero-desc {
-  font-size: 16px; color: var(--muted); line-height: 1.75; max-width: 46ch;
+  font-size: 16px; color: var(--muted); line-height: 1.75;
+  max-width: 48ch; margin-bottom: 40px;
 }
-.hero-ctas { display: flex; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* Strip */
 .hero-strip {
   border-top: 1px solid var(--rule);
   display: grid; grid-template-columns: repeat(4, 1fr);
+  position: relative; z-index: 1;
 }
 @media (max-width: 640px) { .hero-strip { grid-template-columns: repeat(2,1fr); } }
 .hero-strip-cell {
@@ -85,14 +94,14 @@
 }
 
 /* ── WORK SECTIONS ── */
-.work-section { border-top: 1px solid var(--rule); }
+.work-section { border-top: 1px solid var(--rule); padding: 0 48px 72px; }
 
 .section-header {
-  padding: 28px 48px;
+  padding: 28px 0;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   border-bottom: 1px solid var(--rule);
 }
-@media (max-width: 768px) { .section-header { padding: 20px 20px; } }
+@media (max-width: 768px) { .work-section { padding: 0 20px 56px; } .section-header { padding: 20px 0; } }
 .section-header-left { display: flex; align-items: center; gap: 16px; }
 .section-num {
   font-family: 'JetBrains Mono', monospace;
@@ -112,12 +121,12 @@
   font-size: 10px; color: var(--muted-lt); letter-spacing: 0.08em; white-space: nowrap;
 }
 
-/* ── CARD GRID — flat tiles with 1px rule gaps ── */
+/* ── CARD GRID ── */
 .cs-grid {
   display: grid; grid-template-columns: repeat(2,1fr);
-  gap: 1px; background: var(--rule);
+  gap: 20px; background: transparent;
 }
-.cs-grid .cs-card { border-radius: 0; border: none; }
+.cs-grid .cs-card { border-radius: 0; }
 .cs-grid-3 { grid-template-columns: repeat(3,1fr); }
 
 @media (max-width: 900px) { .cs-grid-3 { grid-template-columns: repeat(2,1fr); } }
@@ -147,18 +156,17 @@
 
 <!-- HERO -->
 <section class="hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
   <div class="hero-body">
     <div class="hero-kicker reveal">Senior Product Designer · London, UK</div>
     <h1 class="reveal reveal-delay-1">Designing<br>complex<br><span class="accent">systems.</span></h1>
-    <div class="hero-row reveal reveal-delay-2">
-      <p class="hero-desc">8+ years turning high-stakes data into clear decisions — real-time terminal operations at Shell, trading platforms across 150+ countries.</p>
-      <div class="hero-ctas">
-        <a href="about.html" class="btn btn-dark">About me</a>
-        <a href="mailto:zahid@zpirani.com" class="btn btn-outline">Get in touch</a>
-      </div>
+    <p class="hero-desc reveal reveal-delay-2">8+ years turning high-stakes data into clear decisions — real-time terminal operations at Shell, trading platforms across 150+ countries.</p>
+    <div class="hero-ctas reveal reveal-delay-3">
+      <a href="#work" class="btn btn-accent">View Work →</a>
+      <a href="mailto:zahid@zpirani.com" class="btn btn-outline">Get in touch</a>
     </div>
   </div>
-  <div class="hero-strip reveal reveal-delay-3">
+  <div class="hero-strip reveal reveal-delay-4">
     <div class="hero-strip-cell">
       <span class="strip-label">Current</span>
       <span class="strip-value">Shell — Terminal &amp; LNG</span>
@@ -178,7 +186,7 @@
   </div>
 </section>
 
-<main>
+<main id="work">
 
 <!-- SHELL -->
 <section class="work-section">
@@ -332,6 +340,156 @@
 
 <div id="site-footer"></div>
 <script src="assets/site.js"></script>
-<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+<script>
+(function () {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const ctx = canvas.getContext('2d');
+  const CELL = 44;
+  const RGB  = '34,211,238';
+  const MAX_PACKETS = 7;
+  const TRAIL_LEN   = 14;
+
+  let W, H, cols, rows, sinkX, sinkY;
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+    cols  = Math.ceil(W / CELL) + 1;
+    rows  = Math.ceil(H / CELL) + 1;
+    sinkX = Math.floor(cols * 0.42);
+    sinkY = Math.floor(rows * 0.48);
+  }
+
+  function cc(cx, cy) {
+    return { x: cx * CELL + CELL / 2, y: cy * CELL + CELL / 2 };
+  }
+
+  function Packet(delay) {
+    this.delay  = delay || 0;
+    this.done   = false;
+    this.trail  = [];
+    this.interp = 0;
+    this.speed  = 0.022 + Math.random() * 0.022;
+    this.alpha  = 0.45 + Math.random() * 0.45;
+
+    var edge = Math.floor(Math.random() * 4);
+    if (edge === 0) { this.cx = Math.floor(Math.random() * cols); this.cy = 0; }
+    else if (edge === 1) { this.cx = cols - 1; this.cy = Math.floor(Math.random() * rows); }
+    else if (edge === 2) { this.cx = Math.floor(Math.random() * cols); this.cy = rows - 1; }
+    else { this.cx = 0; this.cy = Math.floor(Math.random() * rows); }
+
+    this.trail.push({ cx: this.cx, cy: this.cy });
+    this.nextCx = this.cx;
+    this.nextCy = this.cy;
+    this._plan();
+  }
+
+  Packet.prototype._plan = function () {
+    var dx = sinkX - this.cx, dy = sinkY - this.cy;
+    if (dx === 0 && dy === 0) { this.done = true; return; }
+    var goH = Math.abs(dx) >= Math.abs(dy);
+    if (Math.random() < 0.18) goH = !goH;
+    if (goH && dx !== 0) { this.nextCx = this.cx + (dx > 0 ? 1 : -1); this.nextCy = this.cy; }
+    else if (dy !== 0)   { this.nextCx = this.cx; this.nextCy = this.cy + (dy > 0 ? 1 : -1); }
+    else                 { this.nextCx = this.cx + (dx > 0 ? 1 : -1); this.nextCy = this.cy; }
+    this.nextCx = Math.max(0, Math.min(cols - 1, this.nextCx));
+    this.nextCy = Math.max(0, Math.min(rows - 1, this.nextCy));
+  };
+
+  Packet.prototype.update = function () {
+    if (this.delay > 0) { this.delay--; return; }
+    if (this.done) return;
+    this.interp += this.speed;
+    if (this.interp >= 1) {
+      this.interp = 0;
+      this.cx = this.nextCx; this.cy = this.nextCy;
+      this.trail.push({ cx: this.cx, cy: this.cy });
+      if (this.trail.length > TRAIL_LEN) this.trail.shift();
+      this._plan();
+    }
+  };
+
+  Packet.prototype.draw = function () {
+    if (this.delay > 0 || this.trail.length < 2) return;
+
+    // Trail lines
+    for (var i = 1; i < this.trail.length; i++) {
+      var frac  = i / this.trail.length;
+      var a = cc(this.trail[i-1].cx, this.trail[i-1].cy);
+      var b = cc(this.trail[i].cx,   this.trail[i].cy);
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      ctx.strokeStyle = 'rgba(' + RGB + ',' + (frac * this.alpha * 0.65) + ')';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+
+    // Interpolated head
+    var tail = cc(this.cx, this.cy);
+    var next = cc(this.nextCx, this.nextCy);
+    var hx = tail.x + (next.x - tail.x) * this.interp;
+    var hy = tail.y + (next.y - tail.y) * this.interp;
+
+    // Glow
+    var g = ctx.createRadialGradient(hx, hy, 0, hx, hy, CELL);
+    g.addColorStop(0, 'rgba(' + RGB + ',' + (this.alpha * 0.45) + ')');
+    g.addColorStop(1, 'rgba(' + RGB + ',0)');
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.arc(hx, hy, CELL, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Dot
+    ctx.beginPath();
+    ctx.arc(hx, hy, 2.5, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(' + RGB + ',' + this.alpha + ')';
+    ctx.fill();
+  };
+
+  function drawGrid() {
+    ctx.strokeStyle = 'rgba(' + RGB + ',0.042)';
+    ctx.lineWidth = 0.5;
+    for (var x = 0; x < cols; x++) {
+      ctx.beginPath();
+      ctx.moveTo(x * CELL + CELL / 2, 0);
+      ctx.lineTo(x * CELL + CELL / 2, H);
+      ctx.stroke();
+    }
+    for (var y = 0; y < rows; y++) {
+      ctx.beginPath();
+      ctx.moveTo(0, y * CELL + CELL / 2);
+      ctx.lineTo(W, y * CELL + CELL / 2);
+      ctx.stroke();
+    }
+  }
+
+  var packets = [], frame = 0;
+
+  function spawnIfNeeded() {
+    if (packets.filter(function(p){ return !p.done; }).length < MAX_PACKETS) {
+      packets.push(new Packet(Math.floor(Math.random() * 30)));
+    }
+  }
+
+  function loop() {
+    ctx.clearRect(0, 0, W, H);
+    drawGrid();
+    if (frame % 55 === 0) spawnIfNeeded();
+    packets = packets.filter(function(p){ return !p.done; });
+    packets.forEach(function(p){ p.update(); p.draw(); });
+    frame++;
+    requestAnimationFrame(loop);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+  for (var i = 0; i < 5; i++) packets.push(new Packet(i * 28));
+  loop();
+})();
+</script>
 </body>
 </html>
