@@ -4,88 +4,161 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Zahid Pirani — Senior Product Designer</title>
-<meta name="description" content="Senior Product Designer with 8+ years designing complex systems for energy, trading, and fintech. Based in London, UK.">
+<meta name="description" content="Senior Product Designer. 8+ years in energy, trading, and fintech. London, UK.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/auth.js"></script>
-<script src="https://mcp.figma.com/mcp/html-to-design/capture.js"></script>
 <style>
 
-/* ── HERO ── */
-.hero {
-  min-height: calc(100vh - 64px);
-  display: flex; flex-direction: column;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--bg);
-  border-bottom: 1px solid var(--rule);
-  position: relative; overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Canvas circuit animation */
 #hero-canvas {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   pointer-events: none; display: block;
 }
 
-.hero-body {
-  flex: 1; display: flex; flex-direction: column; justify-content: center;
-  padding: 96px 48px 64px;
+/* ── MAIN CONTENT ── */
+.landing-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 64px;
   position: relative; z-index: 1;
 }
-@media (max-width: 768px) { .hero-body { padding: 64px 20px 48px; } }
+@media (max-width: 768px) { .landing-body { padding: 60px 24px; } }
 
-.hero-kicker {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; font-weight: 400; color: var(--muted);
-  letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 32px;
-  display: flex; align-items: center; gap: 12px;
-}
-.hero-kicker::before {
-  content: ""; display: block; width: 20px; height: 1px; background: var(--accent);
-}
-
-.hero h1 {
+.landing-name {
   font-family: 'Schibsted Grotesk', system-ui, sans-serif;
-  font-size: clamp(56px, 9.5vw, 136px);
+  font-size: clamp(60px, 9vw, 120px);
   font-weight: 900;
-  line-height: 0.92;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
   color: var(--ink);
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 }
-.hero h1 .accent { color: var(--accent); }
 
-.hero-desc {
-  font-size: 16px; color: var(--muted); line-height: 1.75;
-  max-width: 48ch; margin-bottom: 40px;
-}
-.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
-
-/* Strip */
-.hero-strip {
-  border-top: 1px solid var(--rule);
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  position: relative; z-index: 1;
-}
-@media (max-width: 640px) { .hero-strip { grid-template-columns: repeat(2,1fr); } }
-.hero-strip-cell {
-  padding: 20px 32px; border-right: 1px solid var(--rule);
-  display: flex; flex-direction: column; gap: 7px;
-}
-@media (max-width: 768px) { .hero-strip-cell { padding: 16px 20px; } }
-.hero-strip-cell:last-child { border-right: none; }
-.strip-label {
+.landing-role {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-lt);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
-.strip-value { font-size: 13px; font-weight: 500; color: var(--ink); line-height: 1.4; }
-.avail { color: var(--green); display: flex; align-items: center; gap: 8px; }
+.landing-role::before {
+  content: "";
+  display: block;
+  width: 22px; height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+@media (max-width: 768px) { .landing-role { margin-bottom: 52px; } }
+
+/* ── PROJECT LIST ── */
+.project-list { margin-bottom: 0; }
+
+.project-group {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  padding: 18px 0;
+  align-items: baseline;
+}
+.project-group:last-child { border-bottom: 1px solid var(--rule); }
+
+@media (max-width: 560px) {
+  .project-group { grid-template-columns: 1fr; gap: 10px; }
+}
+
+.project-company {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-lt);
+  padding-top: 4px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  flex-direction: column;
+}
+
+.project-link {
+  font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--muted);
+  transition: color 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 3px 0;
+}
+.project-link:hover { color: var(--ink); }
+.project-link .arr {
+  font-size: 11px;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.15s, transform 0.15s;
+  display: inline-block;
+}
+.project-link:hover .arr {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── FOOTER BAR ── */
+.landing-foot {
+  position: relative; z-index: 1;
+  padding: 20px 64px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) { .landing-foot { padding: 16px 24px; } }
+
+.avail {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .avail::before {
-  content: ""; width: 6px; height: 6px; border-radius: 50%;
-  background: var(--green); flex-shrink: 0;
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
   box-shadow: 0 0 0 3px rgba(52,211,153,0.15);
   animation: pulse 2.4s ease-in-out infinite;
 }
@@ -94,308 +167,117 @@
   50%      { box-shadow: 0 0 0 7px rgba(52,211,153,0.04); }
 }
 
-/* ── WORK SECTIONS ── */
-.work-section { border-top: 1px solid var(--rule); padding: 0 48px 72px; }
-
-.section-header {
-  padding: 28px 0;
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  border-bottom: 1px solid var(--rule);
+.foot-links {
+  display: flex;
+  gap: 28px;
 }
-@media (max-width: 768px) { .work-section { padding: 0 20px 56px; } .section-header { padding: 20px 0; } }
-.section-header-left { display: flex; align-items: center; gap: 16px; }
-.section-num {
+.foot-links a {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; font-weight: 400; color: var(--muted-lt); letter-spacing: 0.08em;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-lt);
+  transition: color 0.15s;
 }
-.section-company {
-  font-family: 'Schibsted Grotesk', sans-serif;
-  font-size: 18px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink);
-}
-.section-desc {
-  font-size: 12px; color: var(--muted-lt);
-  font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em;
-}
-@media (max-width: 480px) { .section-desc { display: none; } }
-.section-period {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; color: var(--muted-lt); letter-spacing: 0.08em; white-space: nowrap;
-}
-
-/* ── CARD GRID ── */
-.cs-grid {
-  display: grid; grid-template-columns: repeat(2,1fr);
-  gap: 20px; background: transparent;
-}
-.cs-grid .cs-card { border-radius: 0; }
-.cs-grid-3 { grid-template-columns: repeat(3,1fr); }
-
-@media (max-width: 900px) { .cs-grid-3 { grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 580px) { .cs-grid, .cs-grid-3 { grid-template-columns: 1fr; } }
-
-.cs-grid .cs-card.featured { grid-column: 1 / -1; }
-@media (max-width: 720px) { .cs-grid .cs-card.featured { flex-direction: column; } }
-
-.cs-card-wide {
-  grid-column: 1 / -1;
-  display: grid; grid-template-columns: 1fr 2fr;
-}
-.cs-card-wide .thumb { aspect-ratio: auto; min-height: 220px; }
-.cs-card-wide .card-body { padding: 36px 44px; justify-content: center; border-left: 1px solid var(--rule); }
-@media (max-width: 600px) { .cs-card-wide { grid-template-columns: 1fr; } }
-
-/* ── THUMB GRADIENTS ── */
-.thumb-shell-tpc { background: linear-gradient(145deg, #07101E 0%, #0D2040 50%, #122E5E 100%); }
-.thumb-orion     { background: linear-gradient(145deg, #060C18 0%, #0A1830 50%, #0D2240 100%); }
-.thumb-axi       { background: linear-gradient(145deg, #0C0C10 0%, #131318 100%); }
-.thumb-goldpesa  { background: linear-gradient(145deg, #060E09 0%, #0A1C10 50%, #0F2618 100%); }
+.foot-links a:hover { color: var(--ink); }
 
 </style>
 </head>
 <body>
-<div id="site-nav"></div>
 
-<!-- HERO -->
-<section class="hero">
+<div class="landing">
   <canvas id="hero-canvas" aria-hidden="true"></canvas>
-  <div class="hero-body">
-    <div class="hero-kicker reveal">Senior Product Designer · London, UK</div>
-    <h1 class="reveal reveal-delay-1">Designing<br>complex<br><span class="accent">systems.</span></h1>
-    <p class="hero-desc reveal reveal-delay-2">8+ years turning high-stakes data into clear decisions — real-time terminal operations at Shell, trading platforms across 150+ countries.</p>
-    <div class="hero-ctas reveal reveal-delay-3">
-      <a href="#work" class="btn btn-accent">View Work →</a>
-      <a href="mailto:zahid@zpirani.com" class="btn btn-outline">Get in touch</a>
-    </div>
-  </div>
-  <div class="hero-strip reveal reveal-delay-4">
-    <div class="hero-strip-cell">
-      <span class="strip-label">Current</span>
-      <span class="strip-value">Shell — Terminal &amp; LNG</span>
-    </div>
-    <div class="hero-strip-cell">
-      <span class="strip-label">Focus</span>
-      <span class="strip-value">Energy · Trading · Fintech</span>
-    </div>
-    <div class="hero-strip-cell">
-      <span class="strip-label">Experience</span>
-      <span class="strip-value">8+ years</span>
-    </div>
-    <div class="hero-strip-cell">
-      <span class="strip-label">Status</span>
-      <span class="strip-value avail">Open to opportunities</span>
-    </div>
-  </div>
-</section>
 
-<main id="work">
+  <div class="landing-body">
 
-<!-- SHELL -->
-<section class="work-section">
-  <div class="section-header reveal">
-    <div class="section-header-left">
-      <span class="section-num">01</span>
-      <span class="section-company">Shell</span>
-      <span class="section-desc">Terminal &amp; LNG</span>
-    </div>
-    <span class="section-period">2025 – Present</span>
-  </div>
-  <div class="cs-grid">
-    <a href="work/shell-tpc.html" class="cs-card reveal">
-      <div class="thumb thumb-shell-tpc">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=500&fit=crop&auto=format&q=80" alt="Terminal Performance Center — enterprise data dashboard" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="card-tags">
-          <span>Enterprise UX</span>
-          <span>Data Viz</span>
-          <span>Databricks</span>
+    <h1 class="landing-name reveal">Zahid<br>Pirani</h1>
+    <p class="landing-role reveal reveal-delay-1">Senior Product Designer &nbsp;·&nbsp; London, UK</p>
+
+    <div class="project-list reveal reveal-delay-2">
+
+      <div class="project-group">
+        <span class="project-company">Shell</span>
+        <div class="project-links">
+          <a href="work/shell-tpc.html" class="project-link">Terminal Performance Center <span class="arr">↗</span></a>
+          <a href="work/orion.html"     class="project-link">ORION — Inventory Intelligence <span class="arr">↗</span></a>
         </div>
-        <h3>Terminal Performance Center</h3>
-        <p>A unified platform giving senior leaders real-time visibility into the operational and financial health of 100+ terminals worldwide — powering decisions on investment, optimisation, and divestment.</p>
-        <span class="rlink">View case study</span>
       </div>
-    </a>
-    <a href="work/orion.html" class="cs-card reveal reveal-delay-1">
-      <div class="thumb thumb-orion">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=500&fit=crop&auto=format&q=80" alt="ORION inventory intelligence — real-time data" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="card-tags">
-          <span>Real-Time Data</span>
-          <span>Trading Tools</span>
+
+      <div class="project-group">
+        <span class="project-company">Axi</span>
+        <div class="project-links">
+          <a href="work/atp-mobile.html"        class="project-link">ATP Mobile <span class="arr">↗</span></a>
+          <a href="work/atp-web.html"           class="project-link">ATP Web <span class="arr">↗</span></a>
+          <a href="work/axi-crypto.html"        class="project-link">Crypto Trading <span class="arr">↗</span></a>
+          <a href="work/axi-design-system.html" class="project-link">Design System <span class="arr">↗</span></a>
         </div>
-        <h3>ORION — Inventory Intelligence</h3>
-        <p>A real-time inventory dashboard replacing fragmented Supply updates with a live Databricks-fed single source of truth across customer positions, movements, and constraints.</p>
-        <span class="rlink">View case study</span>
       </div>
-    </a>
-  </div>
-</section>
 
-<!-- AXI -->
-<section class="work-section">
-  <div class="section-header reveal">
-    <div class="section-header-left">
-      <span class="section-num">02</span>
-      <span class="section-company">Axi</span>
-      <span class="section-desc">Retail Trading</span>
+      <div class="project-group">
+        <span class="project-company">GoldPesa</span>
+        <div class="project-links">
+          <a href="work/goldpesa-uniswap.html"  class="project-link">Uniswap DApp <span class="arr">↗</span></a>
+          <a href="work/goldpesa-staking.html"  class="project-link">Staking Contract <span class="arr">↗</span></a>
+          <a href="work/goldpesa-polygon.html"  class="project-link">Polygon Bridge <span class="arr">↗</span></a>
+        </div>
+      </div>
+
     </div>
-    <span class="section-period">2022 – 2025</span>
   </div>
-  <div class="cs-grid">
-    <a href="work/atp-mobile.html" class="cs-card reveal">
-      <div class="thumb thumb-axi">
-        <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=900&h=500&fit=crop&auto=format&q=80" alt="ATP Mobile — trading app on iOS and Android" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="card-tags"><span>iOS · Android</span><span>Onboarding</span></div>
-        <h3>ATP Mobile</h3>
-        <p>End-to-end mobile trading — adaptive onboarding across 180+ jurisdictions, −35% account setup time, 2× conversion uplift.</p>
-        <span class="rlink">View case study</span>
-      </div>
-    </a>
-    <a href="work/atp-web.html" class="cs-card reveal reveal-delay-1">
-      <div class="thumb thumb-axi">
-        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=900&h=500&fit=crop&auto=format&q=80" alt="ATP Web — CFD trading platform" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="card-tags"><span>Web App</span><span>CFD Trading</span></div>
-        <h3>ATP Web</h3>
-        <p>Modular CFD platform redesign across Forex, Commodities, Indices, and Crypto — improving consistency and delivery speed globally.</p>
-        <span class="rlink">View case study</span>
-      </div>
-    </a>
-    <a href="work/axi-crypto.html" class="cs-card reveal reveal-delay-2">
-      <div class="thumb thumb-axi">
-        <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=900&h=500&fit=crop&auto=format&q=80" alt="Axi Crypto — perpetual futures" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="card-tags"><span>Crypto</span><span>Perp Futures</span></div>
-        <h3>Axi Crypto</h3>
-        <p>Crypto Perpetual Futures launch — +22% usability score, live in 150+ countries, 100+ research participants.</p>
-        <span class="rlink">View case study</span>
-      </div>
-    </a>
-    <a href="work/axi-design-system.html" class="cs-card reveal reveal-delay-3">
-      <div class="thumb thumb-axi">
-        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=900&h=500&fit=crop&auto=format&q=80" alt="Axi Design System — component library" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="card-tags"><span>Design System</span><span>Governance</span></div>
-        <h3>Axi Design System</h3>
-        <p>Scalable design system across 4 engineering teams in 3 countries — enabling faster delivery and cross-team alignment for iOS, Android, Web, and Client Portal.</p>
-        <span class="rlink">View case study</span>
-      </div>
-    </a>
-  </div>
-</section>
 
-<!-- GOLDPESA -->
-<section class="work-section">
-  <div class="section-header reveal">
-    <div class="section-header-left">
-      <span class="section-num">03</span>
-      <span class="section-company">GoldPesa</span>
-      <span class="section-desc">Web3 &amp; DeFi</span>
-    </div>
-    <span class="section-period">2020 – 2022</span>
-  </div>
-  <div class="cs-grid">
-    <a href="work/goldpesa-uniswap.html" class="cs-card reveal">
-      <div class="thumb thumb-goldpesa">
-        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?w=900&h=500&fit=crop&auto=format&q=80" alt="GoldPesa Uniswap DApp — gold-backed DeFi" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="card-tags"><span>DeFi</span><span>Web3</span></div>
-        <h3>GoldPesa Uniswap DApp</h3>
-        <p>Decentralised app for GPO — a gold-backed ERC20 token. 3,000+ users, $50M market cap in 30 days. Best DeFi Project, Crypto Expo Dubai 2022.</p>
-        <span class="rlink">View case study</span>
-      </div>
-    </a>
-    <a href="work/goldpesa-staking.html" class="cs-card reveal reveal-delay-1">
-      <div class="thumb thumb-goldpesa">
-        <img src="https://images.unsplash.com/photo-1605792657660-596af9009e82?w=900&h=500&fit=crop&auto=format&q=80" alt="GoldPesa Staking — token yield" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="card-tags"><span>DeFi</span><span>Smart Contracts</span></div>
-        <h3>Staking Contract</h3>
-        <p>Staking interface enabling GPO holders to lock tokens and earn yield — contributing to the $50M market cap launch in the first month.</p>
-        <span class="rlink">View case study</span>
-      </div>
-    </a>
-    <a href="work/goldpesa-polygon.html" class="cs-card reveal reveal-delay-2">
-      <div class="thumb thumb-goldpesa">
-        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&h=500&fit=crop&auto=format&q=80" alt="GoldPesa Polygon Bridge — cross-chain" loading="lazy">
-      </div>
-      <div class="card-body">
-        <div class="card-tags"><span>Cross-Chain</span><span>Polygon</span></div>
-        <h3>Polygon Bridge</h3>
-        <p>Cross-chain bridge from Ethereum L1 to Polygon L2 — cutting transaction fees from ~50% of investment value to near-zero.</p>
-        <span class="rlink">View case study</span>
-      </div>
-    </a>
-  </div>
-</section>
+  <footer class="landing-foot reveal reveal-delay-3">
+    <span class="avail">Open to opportunities</span>
+    <nav class="foot-links">
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="mailto:zahid@zpirani.com">Contact</a>
+    </nav>
+  </footer>
+</div>
 
-</main>
-
-<div id="site-footer"></div>
 <script src="assets/site.js"></script>
 <script>
 (function () {
-  const canvas = document.getElementById('hero-canvas');
+  var canvas = document.getElementById('hero-canvas');
   if (!canvas) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const ctx = canvas.getContext('2d');
-  const CELL = 44;
-  const RGB  = '34,211,238';
-  const MAX_PACKETS = 7;
-  const TRAIL_LEN   = 14;
-
-  let W, H, cols, rows, sinkX, sinkY;
+  var ctx  = canvas.getContext('2d');
+  var CELL = 48, RGB = '34,211,238', MAX = 6, TRAIL = 12;
+  var W, H, cols, rows, sinkX, sinkY;
 
   function resize() {
     W = canvas.width  = canvas.offsetWidth;
     H = canvas.height = canvas.offsetHeight;
     cols  = Math.ceil(W / CELL) + 1;
     rows  = Math.ceil(H / CELL) + 1;
-    sinkX = Math.floor(cols * 0.42);
+    sinkX = Math.floor(cols * 0.44);
     sinkY = Math.floor(rows * 0.48);
   }
 
-  function cc(cx, cy) {
-    return { x: cx * CELL + CELL / 2, y: cy * CELL + CELL / 2 };
-  }
+  function cc(cx, cy) { return { x: cx * CELL + CELL / 2, y: cy * CELL + CELL / 2 }; }
 
   function Packet(delay) {
-    this.delay  = delay || 0;
-    this.done   = false;
-    this.trail  = [];
-    this.interp = 0;
-    this.speed  = 0.022 + Math.random() * 0.022;
-    this.alpha  = 0.45 + Math.random() * 0.45;
-
-    var edge = Math.floor(Math.random() * 4);
-    if (edge === 0) { this.cx = Math.floor(Math.random() * cols); this.cy = 0; }
-    else if (edge === 1) { this.cx = cols - 1; this.cy = Math.floor(Math.random() * rows); }
-    else if (edge === 2) { this.cx = Math.floor(Math.random() * cols); this.cy = rows - 1; }
-    else { this.cx = 0; this.cy = Math.floor(Math.random() * rows); }
-
+    this.delay = delay || 0; this.done = false; this.trail = [];
+    this.interp = 0; this.speed = 0.02 + Math.random() * 0.02;
+    this.alpha = 0.4 + Math.random() * 0.4;
+    var e = Math.floor(Math.random() * 4);
+    if      (e === 0) { this.cx = Math.floor(Math.random() * cols); this.cy = 0; }
+    else if (e === 1) { this.cx = cols - 1; this.cy = Math.floor(Math.random() * rows); }
+    else if (e === 2) { this.cx = Math.floor(Math.random() * cols); this.cy = rows - 1; }
+    else              { this.cx = 0; this.cy = Math.floor(Math.random() * rows); }
     this.trail.push({ cx: this.cx, cy: this.cy });
-    this.nextCx = this.cx;
-    this.nextCy = this.cy;
-    this._plan();
+    this.nextCx = this.cx; this.nextCy = this.cy; this._plan();
   }
 
   Packet.prototype._plan = function () {
     var dx = sinkX - this.cx, dy = sinkY - this.cy;
-    if (dx === 0 && dy === 0) { this.done = true; return; }
+    if (!dx && !dy) { this.done = true; return; }
     var goH = Math.abs(dx) >= Math.abs(dy);
     if (Math.random() < 0.18) goH = !goH;
-    if (goH && dx !== 0) { this.nextCx = this.cx + (dx > 0 ? 1 : -1); this.nextCy = this.cy; }
-    else if (dy !== 0)   { this.nextCx = this.cx; this.nextCy = this.cy + (dy > 0 ? 1 : -1); }
-    else                 { this.nextCx = this.cx + (dx > 0 ? 1 : -1); this.nextCy = this.cy; }
+    if (goH && dx)  { this.nextCx = this.cx + (dx > 0 ? 1 : -1); this.nextCy = this.cy; }
+    else if (dy)    { this.nextCx = this.cx; this.nextCy = this.cy + (dy > 0 ? 1 : -1); }
+    else            { this.nextCx = this.cx + (dx > 0 ? 1 : -1); this.nextCy = this.cy; }
     this.nextCx = Math.max(0, Math.min(cols - 1, this.nextCx));
     this.nextCy = Math.max(0, Math.min(rows - 1, this.nextCy));
   };
@@ -405,90 +287,56 @@
     if (this.done) return;
     this.interp += this.speed;
     if (this.interp >= 1) {
-      this.interp = 0;
-      this.cx = this.nextCx; this.cy = this.nextCy;
+      this.interp = 0; this.cx = this.nextCx; this.cy = this.nextCy;
       this.trail.push({ cx: this.cx, cy: this.cy });
-      if (this.trail.length > TRAIL_LEN) this.trail.shift();
+      if (this.trail.length > TRAIL) this.trail.shift();
       this._plan();
     }
   };
 
   Packet.prototype.draw = function () {
     if (this.delay > 0 || this.trail.length < 2) return;
-
-    // Trail lines
     for (var i = 1; i < this.trail.length; i++) {
-      var frac  = i / this.trail.length;
+      var f = i / this.trail.length;
       var a = cc(this.trail[i-1].cx, this.trail[i-1].cy);
-      var b = cc(this.trail[i].cx,   this.trail[i].cy);
-      ctx.beginPath();
-      ctx.moveTo(a.x, a.y);
-      ctx.lineTo(b.x, b.y);
-      ctx.strokeStyle = 'rgba(' + RGB + ',' + (frac * this.alpha * 0.65) + ')';
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
+      var b = cc(this.trail[i].cx, this.trail[i].cy);
+      ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+      ctx.strokeStyle = 'rgba(' + RGB + ',' + (f * this.alpha * 0.6) + ')';
+      ctx.lineWidth = 1.5; ctx.stroke();
     }
-
-    // Interpolated head
-    var tail = cc(this.cx, this.cy);
-    var next = cc(this.nextCx, this.nextCy);
-    var hx = tail.x + (next.x - tail.x) * this.interp;
-    var hy = tail.y + (next.y - tail.y) * this.interp;
-
-    // Glow
+    var t = cc(this.cx, this.cy), n = cc(this.nextCx, this.nextCy);
+    var hx = t.x + (n.x - t.x) * this.interp, hy = t.y + (n.y - t.y) * this.interp;
     var g = ctx.createRadialGradient(hx, hy, 0, hx, hy, CELL);
-    g.addColorStop(0, 'rgba(' + RGB + ',' + (this.alpha * 0.45) + ')');
+    g.addColorStop(0, 'rgba(' + RGB + ',' + (this.alpha * 0.4) + ')');
     g.addColorStop(1, 'rgba(' + RGB + ',0)');
-    ctx.fillStyle = g;
-    ctx.beginPath();
-    ctx.arc(hx, hy, CELL, 0, Math.PI * 2);
-    ctx.fill();
-
-    // Dot
-    ctx.beginPath();
-    ctx.arc(hx, hy, 2.5, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(' + RGB + ',' + this.alpha + ')';
-    ctx.fill();
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(hx, hy, CELL, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(hx, hy, 2.5, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(' + RGB + ',' + this.alpha + ')'; ctx.fill();
   };
 
   function drawGrid() {
-    ctx.strokeStyle = 'rgba(' + RGB + ',0.042)';
-    ctx.lineWidth = 0.5;
+    ctx.strokeStyle = 'rgba(' + RGB + ',0.038)'; ctx.lineWidth = 0.5;
     for (var x = 0; x < cols; x++) {
-      ctx.beginPath();
-      ctx.moveTo(x * CELL + CELL / 2, 0);
-      ctx.lineTo(x * CELL + CELL / 2, H);
-      ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x*CELL+CELL/2, 0); ctx.lineTo(x*CELL+CELL/2, H); ctx.stroke();
     }
     for (var y = 0; y < rows; y++) {
-      ctx.beginPath();
-      ctx.moveTo(0, y * CELL + CELL / 2);
-      ctx.lineTo(W, y * CELL + CELL / 2);
-      ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(0, y*CELL+CELL/2); ctx.lineTo(W, y*CELL+CELL/2); ctx.stroke();
     }
   }
 
   var packets = [], frame = 0;
-
-  function spawnIfNeeded() {
-    if (packets.filter(function(p){ return !p.done; }).length < MAX_PACKETS) {
-      packets.push(new Packet(Math.floor(Math.random() * 30)));
-    }
-  }
-
   function loop() {
-    ctx.clearRect(0, 0, W, H);
-    drawGrid();
-    if (frame % 55 === 0) spawnIfNeeded();
-    packets = packets.filter(function(p){ return !p.done; });
+    ctx.clearRect(0, 0, W, H); drawGrid();
+    if (frame % 55 === 0 && packets.filter(function(p){return !p.done;}).length < MAX)
+      packets.push(new Packet(Math.floor(Math.random() * 30)));
+    packets = packets.filter(function(p){return !p.done;});
     packets.forEach(function(p){ p.update(); p.draw(); });
-    frame++;
-    requestAnimationFrame(loop);
+    frame++; requestAnimationFrame(loop);
   }
 
   resize();
   window.addEventListener('resize', resize);
-  for (var i = 0; i < 5; i++) packets.push(new Packet(i * 28));
+  for (var i = 0; i < 4; i++) packets.push(new Packet(i * 28));
   loop();
 })();
 </script>
