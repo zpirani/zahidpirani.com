@@ -19,14 +19,6 @@
   display: flex;
   flex-direction: column;
   background: var(--bg);
-  position: relative;
-  overflow: hidden;
-}
-
-#hero-canvas {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  pointer-events: none; display: block;
 }
 
 /* ── MAIN CONTENT ── */
@@ -186,8 +178,6 @@
 <body>
 
 <div class="landing">
-  <canvas id="hero-canvas" aria-hidden="true"></canvas>
-
   <div class="landing-body">
 
     <h1 class="landing-name reveal">Zahid<br>Pirani</h1>
@@ -237,14 +227,7 @@
 
 <script src="assets/site.js"></script>
 <script>
-(function () {
-  var canvas = document.getElementById('hero-canvas');
-  if (!canvas) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  var ctx  = canvas.getContext('2d');
-  var CELL = 48, RGB = '34,211,238', MAX = 6, TRAIL = 12;
-  var W, H, cols, rows, sinkX, sinkY;
+(function () { return;
 
   function resize() {
     W = canvas.width  = canvas.offsetWidth;
