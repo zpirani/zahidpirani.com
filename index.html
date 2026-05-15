@@ -34,12 +34,12 @@
 
 .landing-name {
   font-family: 'Schibsted Grotesk', system-ui, sans-serif;
-  font-size: clamp(60px, 9vw, 120px);
+  font-size: clamp(64px, 9.5vw, 128px);
   font-weight: 900;
-  letter-spacing: -0.045em;
-  line-height: 0.9;
+  letter-spacing: -0.048em;
+  line-height: 0.88;
   color: var(--ink);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .landing-role {
@@ -47,8 +47,8 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 80px;
+  color: var(--muted-lt);
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -56,77 +56,81 @@
 .landing-role::before {
   content: "";
   display: block;
-  width: 22px; height: 1px;
+  width: 20px; height: 1px;
   background: var(--accent);
   flex-shrink: 0;
 }
-@media (max-width: 768px) { .landing-role { margin-bottom: 20px; } }
 
 .landing-tagline {
   font-family: 'Schibsted Grotesk', system-ui, sans-serif;
-  font-size: clamp(16px, 1.8vw, 20px);
-  font-weight: 400;
+  font-size: clamp(17px, 1.9vw, 22px);
+  font-weight: 300;
   color: var(--muted);
-  letter-spacing: -0.01em;
-  line-height: 1.5;
-  max-width: 42ch;
-  margin-bottom: 64px;
+  letter-spacing: -0.015em;
+  line-height: 1.45;
+  max-width: 40ch;
+  margin-bottom: 72px;
 }
-@media (max-width: 768px) { .landing-tagline { margin-bottom: 44px; } }
+@media (max-width: 768px) {
+  .landing-role { margin-bottom: 12px; }
+  .landing-tagline { font-size: 17px; margin-bottom: 48px; }
+}
 
 /* ── PROJECT LIST ── */
 .project-list { margin-bottom: 0; }
 
 .project-group {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 148px 1fr;
   gap: 0;
   border-top: 1px solid var(--rule);
-  padding: 18px 0;
-  align-items: baseline;
+  padding: 22px 0;
+  align-items: start;
+  transition: background 0.12s;
 }
 .project-group:last-child { border-bottom: 1px solid var(--rule); }
+.project-group:hover { background: rgba(255,255,255,0.012); }
 
 @media (max-width: 560px) {
-  .project-group { grid-template-columns: 1fr; gap: 10px; }
+  .project-group { grid-template-columns: 1fr; gap: 10px; padding: 18px 0; }
 }
 
 .project-company {
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted-lt);
-  padding-top: 4px;
+  padding-top: 5px;
 }
 
 .project-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 4px 0;
   flex-direction: column;
+  gap: 2px;
 }
 
 .project-link {
   font-family: 'Schibsted Grotesk', system-ui, sans-serif;
-  font-size: clamp(15px, 1.6vw, 18px);
+  font-size: clamp(16px, 1.7vw, 20px);
   font-weight: 500;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
   color: var(--muted);
-  transition: color 0.15s;
+  transition: color 0.12s;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   width: fit-content;
-  padding: 3px 0;
+  padding: 4px 0;
+  line-height: 1.3;
 }
 .project-link:hover { color: var(--ink); }
 .project-link .arr {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--accent);
   opacity: 0;
-  transform: translateX(-4px);
-  transition: opacity 0.15s, transform 0.15s;
+  transform: translateX(-6px);
+  transition: opacity 0.12s, transform 0.12s;
   display: inline-block;
 }
 .project-link:hover .arr {
@@ -136,8 +140,7 @@
 
 /* ── FOOTER BAR ── */
 .landing-foot {
-  position: relative; z-index: 1;
-  padding: 20px 64px;
+  padding: 18px 64px;
   border-top: 1px solid var(--rule);
   display: flex;
   align-items: center;
@@ -159,7 +162,7 @@
 }
 .avail::before {
   content: "";
-  width: 6px; height: 6px;
+  width: 5px; height: 5px;
   border-radius: 50%;
   background: var(--green);
   flex-shrink: 0;
@@ -168,12 +171,12 @@
 }
 @keyframes pulse {
   0%,100% { box-shadow: 0 0 0 3px rgba(52,211,153,0.15); }
-  50%      { box-shadow: 0 0 0 7px rgba(52,211,153,0.04); }
+  50%      { box-shadow: 0 0 0 6px rgba(52,211,153,0.04); }
 }
 
 .foot-links {
   display: flex;
-  gap: 28px;
+  gap: 24px;
 }
 .foot-links a {
   font-family: 'JetBrains Mono', monospace;
@@ -181,7 +184,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted-lt);
-  transition: color 0.15s;
+  transition: color 0.12s;
 }
 .foot-links a:hover { color: var(--ink); }
 
@@ -239,102 +242,5 @@
 </div>
 
 <script src="assets/site.js"></script>
-<script>
-(function () { return;
-
-  function resize() {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-    cols  = Math.ceil(W / CELL) + 1;
-    rows  = Math.ceil(H / CELL) + 1;
-    sinkX = Math.floor(cols * 0.44);
-    sinkY = Math.floor(rows * 0.48);
-  }
-
-  function cc(cx, cy) { return { x: cx * CELL + CELL / 2, y: cy * CELL + CELL / 2 }; }
-
-  function Packet(delay) {
-    this.delay = delay || 0; this.done = false; this.trail = [];
-    this.interp = 0; this.speed = 0.02 + Math.random() * 0.02;
-    this.alpha = 0.4 + Math.random() * 0.4;
-    var e = Math.floor(Math.random() * 4);
-    if      (e === 0) { this.cx = Math.floor(Math.random() * cols); this.cy = 0; }
-    else if (e === 1) { this.cx = cols - 1; this.cy = Math.floor(Math.random() * rows); }
-    else if (e === 2) { this.cx = Math.floor(Math.random() * cols); this.cy = rows - 1; }
-    else              { this.cx = 0; this.cy = Math.floor(Math.random() * rows); }
-    this.trail.push({ cx: this.cx, cy: this.cy });
-    this.nextCx = this.cx; this.nextCy = this.cy; this._plan();
-  }
-
-  Packet.prototype._plan = function () {
-    var dx = sinkX - this.cx, dy = sinkY - this.cy;
-    if (!dx && !dy) { this.done = true; return; }
-    var goH = Math.abs(dx) >= Math.abs(dy);
-    if (Math.random() < 0.18) goH = !goH;
-    if (goH && dx)  { this.nextCx = this.cx + (dx > 0 ? 1 : -1); this.nextCy = this.cy; }
-    else if (dy)    { this.nextCx = this.cx; this.nextCy = this.cy + (dy > 0 ? 1 : -1); }
-    else            { this.nextCx = this.cx + (dx > 0 ? 1 : -1); this.nextCy = this.cy; }
-    this.nextCx = Math.max(0, Math.min(cols - 1, this.nextCx));
-    this.nextCy = Math.max(0, Math.min(rows - 1, this.nextCy));
-  };
-
-  Packet.prototype.update = function () {
-    if (this.delay > 0) { this.delay--; return; }
-    if (this.done) return;
-    this.interp += this.speed;
-    if (this.interp >= 1) {
-      this.interp = 0; this.cx = this.nextCx; this.cy = this.nextCy;
-      this.trail.push({ cx: this.cx, cy: this.cy });
-      if (this.trail.length > TRAIL) this.trail.shift();
-      this._plan();
-    }
-  };
-
-  Packet.prototype.draw = function () {
-    if (this.delay > 0 || this.trail.length < 2) return;
-    for (var i = 1; i < this.trail.length; i++) {
-      var f = i / this.trail.length;
-      var a = cc(this.trail[i-1].cx, this.trail[i-1].cy);
-      var b = cc(this.trail[i].cx, this.trail[i].cy);
-      ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
-      ctx.strokeStyle = 'rgba(' + RGB + ',' + (f * this.alpha * 0.6) + ')';
-      ctx.lineWidth = 1.5; ctx.stroke();
-    }
-    var t = cc(this.cx, this.cy), n = cc(this.nextCx, this.nextCy);
-    var hx = t.x + (n.x - t.x) * this.interp, hy = t.y + (n.y - t.y) * this.interp;
-    var g = ctx.createRadialGradient(hx, hy, 0, hx, hy, CELL);
-    g.addColorStop(0, 'rgba(' + RGB + ',' + (this.alpha * 0.4) + ')');
-    g.addColorStop(1, 'rgba(' + RGB + ',0)');
-    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(hx, hy, CELL, 0, Math.PI * 2); ctx.fill();
-    ctx.beginPath(); ctx.arc(hx, hy, 2.5, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(' + RGB + ',' + this.alpha + ')'; ctx.fill();
-  };
-
-  function drawGrid() {
-    ctx.strokeStyle = 'rgba(' + RGB + ',0.038)'; ctx.lineWidth = 0.5;
-    for (var x = 0; x < cols; x++) {
-      ctx.beginPath(); ctx.moveTo(x*CELL+CELL/2, 0); ctx.lineTo(x*CELL+CELL/2, H); ctx.stroke();
-    }
-    for (var y = 0; y < rows; y++) {
-      ctx.beginPath(); ctx.moveTo(0, y*CELL+CELL/2); ctx.lineTo(W, y*CELL+CELL/2); ctx.stroke();
-    }
-  }
-
-  var packets = [], frame = 0;
-  function loop() {
-    ctx.clearRect(0, 0, W, H); drawGrid();
-    if (frame % 55 === 0 && packets.filter(function(p){return !p.done;}).length < MAX)
-      packets.push(new Packet(Math.floor(Math.random() * 30)));
-    packets = packets.filter(function(p){return !p.done;});
-    packets.forEach(function(p){ p.update(); p.draw(); });
-    frame++; requestAnimationFrame(loop);
-  }
-
-  resize();
-  window.addEventListener('resize', resize);
-  for (var i = 0; i < 4; i++) packets.push(new Packet(i * 28));
-  loop();
-})();
-</script>
 </body>
 </html>
