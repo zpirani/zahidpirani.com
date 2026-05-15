@@ -60,7 +60,19 @@
   background: var(--accent);
   flex-shrink: 0;
 }
-@media (max-width: 768px) { .landing-role { margin-bottom: 52px; } }
+@media (max-width: 768px) { .landing-role { margin-bottom: 20px; } }
+
+.landing-tagline {
+  font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  max-width: 42ch;
+  margin-bottom: 64px;
+}
+@media (max-width: 768px) { .landing-tagline { margin-bottom: 44px; } }
 
 /* ── PROJECT LIST ── */
 .project-list { margin-bottom: 0; }
@@ -182,6 +194,7 @@
 
     <h1 class="landing-name reveal">Zahid<br>Pirani</h1>
     <p class="landing-role reveal reveal-delay-1">Senior Product Designer &nbsp;·&nbsp; London, UK</p>
+    <p class="landing-tagline reveal reveal-delay-1">I design the interfaces people use when the stakes are high.</p>
 
     <div class="project-list reveal reveal-delay-2">
 
