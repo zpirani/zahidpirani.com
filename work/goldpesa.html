@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>GoldPesa — Zahid Pirani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div id="site-nav"></div>
+
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="tag green">GoldPesa · Jan 2020 – Oct 2022</span>
+      <span class="tag green" style="margin-left:8px;">Web3 · DeFi</span>
+      <span class="tag green" style="margin-left:8px;">Sole designer</span>
+    </div>
+    <h1>GoldPesa</h1>
+    <p class="lead">A gold-backed structured product on Ethereum + Polygon — brand, presale, DEX, bridge, and staking, all built sole-designer.</p>
+    <div class="cs-meta">
+      <div class="meta-item"><label>Company</label><span>Trilogy Precious Metals DMCC</span></div>
+      <div class="meta-item"><label>Role</label><span>Senior Product Designer (sole designer)</span></div>
+      <div class="meta-item"><label>Tenure</label><span>2 years</span></div>
+      <div class="meta-item"><label>Surfaces</label><span>5 connected</span></div>
+      <div class="meta-item"><label>Award</label><span>Best DeFi Project, Crypto Expo Dubai 2022</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="cs-hero-img">
+  <img src="https://placehold.co/1400x560/0F2618/8080A0?text=Hero+%E2%80%94+GoldPesa+wordmark+%2B+token+presale" alt="Placeholder — GoldPesa wordmark + token presale UI on launch day" loading="lazy">
+</div>
+
+<div class="cs-body">
+  <div class="wrap-narrow">
+
+    <div class="cs-stat-row">
+      <div class="cs-stat"><div class="num">3,000+</div><div class="label">Users onboarded</div></div>
+      <div class="cs-stat"><div class="num">~$50M</div><div class="label">Market cap</div></div>
+      <div class="cs-stat"><div class="num">5</div><div class="label">Connected surfaces</div></div>
+    </div>
+
+    <p>GoldPesa is a brand owned and operated by <strong>Trilogy Precious Metals DMCC</strong>, a gold trading company holding a precious metals licence in the UAE since 2013. With offices in Dubai and London, the team brought together engineers, quantitative researchers, finance specialists, and design to build a <strong>gold-backed, tokenised structured product</strong> — combining the stability of physical gold with the liquidity and growth dynamics of a DeFi token.</p>
+    <p>I was the <strong>sole designer</strong> on the work, responsible for the brand identity and every production interface for token holders: the token presale (launched October 16, 2021), the decentralised exchange, the cross-chain bridge, staking, and the broader Platform.</p>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=Brand+system+overview" alt="Placeholder — GoldPesa brand system: wordmark, colour palette, typography, iconography">
+      <figcaption>Brand system overview — wordmark, colour palette, typography, iconography</figcaption>
+    </figure>
+
+    <!-- [VERIFY: confirm engineering team size and reporting line — useful colour for interviews.] -->
+
+    <h2>The problem</h2>
+    <p>GoldPesa's tokenomics were the strategic heart of the product. The GPX token is minted at the spot price of gold plus a 1% fee. Half of that 1% feeds a proprietary trading strategy called <strong>the PAWN</strong>, whose profits buy back and burn GPX from the market — creating demand and reducing supply simultaneously. Increased volatility feeds more fees into the PAWN, which compounds the effect.</p>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=GPX+%C3%97+PAWN+buyback+flywheel" alt="Placeholder — Diagram: GPX × PAWN buyback flywheel, 1% fee feeds trading strategy, profits buy back and burn GPX">
+      <figcaption>Diagram — the GPX × PAWN buyback flywheel: 1% fee feeds trading strategy, profits buy back and burn GPX</figcaption>
+    </figure>
+
+    <p>That mechanism made the token compelling. It also created five hard design problems:</p>
+    <ol>
+      <li><strong>Explain a complex financial product to a crypto-native audience that skims.</strong> Gold-backed structured products are rare in DeFi; the value proposition had to land in seconds.</li>
+      <li><strong>Operate across two blockchains.</strong> Minting on Ethereum; gas-cheap actions on Polygon. Users needed a frictionless way to bridge between them.</li>
+      <li><strong>Bring self-custody into the workflow.</strong> MetaMask and Trust Wallet were the entry points, not a centralised exchange account — and most gold investors had never touched either.</li>
+      <li><strong>Surface real-time PAWN performance transparently.</strong> The buyback-and-burn data was the trust-building proof point, not a footnote.</li>
+      <li><strong>One coherent brand and experience across five surfaces:</strong> presale, DEX, bridge, staking, and customer-facing collateral.</li>
+    </ol>
+
+    <h2>Users</h2>
+    <!-- [VERIFY and replace with real personas from the Platform page — the audience clustering is sketched, the actual persona work belongs here.] -->
+    <p>The audience clustered into three groups:</p>
+    <ul>
+      <li><strong>Crypto-native investors</strong> comfortable with MetaMask, Uniswap, and gas fees, looking for an asset class that wasn't another speculative coin.</li>
+      <li><strong>Gold investors discovering crypto</strong> — more conservative, attracted by the gold backing but unfamiliar with wallet-based UX.</li>
+      <li><strong>DeFi power users</strong> interested in the tokenomics mechanics themselves — yield, buybacks, burn schedules.</li>
+    </ul>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=Personas" alt="Placeholder — Crypto-native investor, gold investor, DeFi power user personas">
+      <figcaption>Personas — crypto-native investor, gold investor, DeFi power user</figcaption>
+    </figure>
+
+    <h2>Competitive landscape</h2>
+    <!-- [PLACEHOLDER — the Platform page references a competitive analysis. Pull in the 126-company landscape when ready.] -->
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=Competitive+analysis" alt="Placeholder — Output of the 126-company landscape">
+      <figcaption>Competitive analysis — output of the 126-company landscape</figcaption>
+    </figure>
+
+    <h2>The system</h2>
+    <p>Five connected surfaces, one design language.</p>
+
+    <h3>1. GoldPesa Platform</h3>
+    <p>The hub. Account, portfolio, token information, and entry points to every other surface.</p>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=GoldPesa+Platform" alt="Placeholder — GoldPesa Platform dashboard / portfolio view">
+      <figcaption>GoldPesa Platform — dashboard / portfolio view</figcaption>
+    </figure>
+
+    <h3>2. Token presale UI — launched October 16, 2021</h3>
+    <p>The first public surface. Users connected MetaMask or Trust Wallet and swapped ETH for the GoldPesa Option token (GPO). This is where brand met functional UI for the first time.</p>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=Token+presale+UI" alt="Placeholder — Connect Wallet to GPO purchase flow">
+      <figcaption>Token presale UI — Connect Wallet to GPO purchase flow</figcaption>
+    </figure>
+
+    <h3>3. Uniswap-powered DEX</h3>
+    <p>The interface for token holders to deposit, bridge, stake, and swap their tokens on the GoldPesa Decentralized Exchange.</p>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=DEX" alt="Placeholder — Swap interface on GoldPesa's Uniswap-powered exchange">
+      <figcaption>DEX — swap interface on GoldPesa's Uniswap-powered exchange</figcaption>
+    </figure>
+
+    <h3>4. Polygon Bridge</h3>
+    <p>The cross-chain workflow moving holdings from Ethereum to Polygon and back — abstracting the complexity into a single confirmation step.</p>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=Polygon+Bridge" alt="Placeholder — Cross-chain flow with single-confirmation pattern">
+      <figcaption>Polygon Bridge — cross-chain flow with single-confirmation pattern</figcaption>
+    </figure>
+
+    <h3>5. Staking Contract UI</h3>
+    <p>The interface for token holders to lock GPX in exchange for rewards generated by the PAWN trading strategy.</p>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=Staking" alt="Placeholder — Stake / unstake / rewards interface">
+      <figcaption>Staking — stake / unstake / rewards interface</figcaption>
+    </figure>
+
+    <h3>6. Brand system &amp; presentation</h3>
+    <p>Wordmark, colour, type, iconography, tradeshow banners and booth design, investor letters, pitch deck.</p>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=Brand+%26+collateral" alt="Placeholder — Tradeshow booth, investor letter, pitch deck spread">
+      <figcaption>Brand &amp; collateral — tradeshow booth, investor letter, pitch deck spread</figcaption>
+    </figure>
+
+    <h2>Process</h2>
+    <!-- [PLACEHOLDER — pull in the real narrative in your voice from the Platform page sketches/process notes.] -->
+    <ul>
+      <li>Stakeholder interviews with the Trilogy founders, engineering, and quant teams</li>
+      <li>Competitive scan of gold-backed and stablecoin tokens</li>
+      <li>Sketches and low-fidelity wireframes</li>
+      <li>Iterative high-fidelity design with engineering review</li>
+      <li>Production hand-off and post-launch iteration</li>
+    </ul>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=Process+artefacts" alt="Placeholder — Sketches → wireframes → high-fidelity → production">
+      <figcaption>Process artefacts — sketches → wireframes → high-fidelity → production</figcaption>
+    </figure>
+
+    <h2>Outcomes</h2>
+    <ul>
+      <li><strong>3,000+ users</strong> onboarded during the launch window</li>
+      <li><strong>~$50M market cap</strong> reached</li>
+      <li><strong>Award for Best DeFi Project, 2022</strong> (Crypto Expo Dubai)</li>
+    </ul>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/0F2618/8080A0?text=Outcomes+visualisation" alt="Placeholder — Launch growth chart or summary infographic">
+      <figcaption>Outcomes visualisation — launch growth chart or summary infographic</figcaption>
+    </figure>
+
+    <h2>Reflection</h2>
+    <p>GoldPesa was where I became a systems thinker before I had the vocabulary for it. As the sole designer, I held the whole product in my head at once — brand, presale, DEX, bridge, staking, investor letters. Every decision in one surface had to propagate to the others. It taught me what designing without a system feels like, and why building one is non-negotiable at scale. Every design system project I've worked on since traces back to lessons from this one.</p>
+    <p>The two audiences were the hard part. Crypto-native users skim and don't read disclaimers. Gold investors read everything and distrust the technology. The product had to convince both at the same moment — there was no opportunity to A/B-test the brand voice or simplify the workflow for one cohort. I learned to design for the more sceptical of the two as the default: if the wording, the iconography, and the flow held up for the gold investor, the crypto-native user could handle it. The reverse was never true.</p>
+    <p>If I were starting again today, I'd build the brand and design system before the product surfaces, not in parallel with them. The five connected products would have shipped faster and more consistently if the system had been the first deliverable rather than a concurrent one. The same lesson played out at Axi a few years later when ATP started without a mature design system and product velocity only caught up once the system did. The systems thinking I now apply at Shell across Terminal Cockpit and TPC started here.</p>
+
+    <!--
+    [Open items]
+    1. Outcome numbers confirmed — 3,000+ users, ~$50M market cap, 2022 DeFi award (Crypto Expo Dubai).
+    2. Personas section — placeholder accepted; replace with real persona work from the Platform page when ready.
+    3. Competitive analysis — placeholder accepted; pull in the 126-company landscape when ready.
+    4. Process section — placeholder accepted; write in your voice when ready.
+    5. Reflection drafted — edit into your voice; replace, tighten, or rewrite as needed.
+    6. Image placeholders added throughout — ~12 spots marked with placeholder URLs; swap real screenshots in.
+    -->
+
+  </div>
+</div>
+
+<section class="cs-next">
+  <div class="inner">
+    <div>
+      <p>Next case study</p>
+      <h3>Terminal Performance Center →</h3>
+    </div>
+    <a href="shell-tpc.html" class="btn btn-dark">View →</a>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Terminal Cockpit Redesign — Zahid Pirani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div id="site-nav"></div>
+
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="tag accent">Shell · Nov 2025 – Apr 2026</span>
+      <span class="tag accent" style="margin-left:8px;">Enterprise UX</span>
+      <span class="tag accent" style="margin-left:8px;">Design System</span>
+    </div>
+    <h1>Terminal Cockpit Redesign</h1>
+    <p class="lead">Bringing consistency to 8 operator-facing dashboards across Shell's global terminal network through SDS 2.0.</p>
+    <div class="cs-meta">
+      <div class="meta-item"><label>Company</label><span>Shell, Trading &amp; Supply</span></div>
+      <div class="meta-item"><label>Role</label><span>Lead Designer</span></div>
+      <div class="meta-item"><label>Timeline</label><span>6 months</span></div>
+      <div class="meta-item"><label>Modules</label><span>8 redesigned</span></div>
+      <div class="meta-item"><label>Components</label><span>~130 extended into SDS 2.0</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="cs-hero-img">
+  <img src="https://placehold.co/1400x560/1D1F28/8080A0?text=Hero+%E2%80%94+SDS+2.0+component+snapshot" alt="Placeholder — SDS 2.0 component snapshot" loading="lazy">
+</div>
+
+<div class="cs-body">
+  <div class="wrap-narrow">
+
+    <p>When the data platform underneath Shell's terminal dashboards migrated from DNA to EDP, the operator-facing front end needed to be reviewed. Eight fragmented modules — each with its own filter patterns, status colors, and table conventions — had to become one consistent operator experience. I led the redesign across all eight, leveraging and extending Shell's SDS 2.0 design system to ship at the pace the migration demanded.</p>
+
+    <div class="cs-stat-row">
+      <div class="cs-stat"><div class="num">8</div><div class="label">Modules redesigned</div></div>
+      <div class="cs-stat"><div class="num">~130</div><div class="label">Components extended into SDS 2.0</div></div>
+      <div class="cs-stat"><div class="num">100+</div><div class="label">Terminals globally</div></div>
+    </div>
+
+    <h2>Context</h2>
+    <p>Shell's Trading &amp; Supply business operates more than 100 terminals globally. At each one, operators and managers based at the terminal site run the day-to-day reality of moving product through the network — tracking inventory, reporting outages, monitoring alarms, reconciling stock, watching financial performance. Most of that work happens through dashboards.</p>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Terminal+Cockpit+%E2%80%94+context+image" alt="Placeholder — terminal cockpit context image">
+      <figcaption>Shell terminal operations — context</figcaption>
+    </figure>
+
+    <p>When I joined as Lead Designer on Terminal Cockpit, those dashboards were in the middle of a platform migration — moving from DNA (the legacy data platform) to EDP (Shell's enterprise Databricks-based data foundation). The migration team had recognized that simply porting the existing front end across would carry the existing problems with it: eight modules that had grown up independently over time, each with its own filter patterns, status colors, and table conventions. Designers were brought in to use the migration as an opportunity to rebuild the operator experience properly. I led the redesign of all eight modules across six months.</p>
+
+    <h2>The problem: fragmented dashboards</h2>
+    <p>Each of the eight modules in Terminal Cockpit had grown up at a different time, built by different teams, for different parts of the operator's job. The result wasn't broken software — every module worked. The problem was that none of them worked the same way.</p>
+
+    <p>Filters in Alarms behaved differently from filters in Assets. A status indicator that meant "needs attention" in one module used a color that meant "operational" in another. Table behaviors — sorting, freezing, pagination — were inconsistent from module to module. Operators who moved between modules during their shift were effectively re-learning conventions every time they switched context.</p>
+
+    <p>The cost wasn't catastrophic, but it was constant. Cognitive overhead on every module switch. Trust eroded by status colors that didn't mean the same thing twice. A platform that, in aggregate, felt older and more chaotic than any of its individual parts.</p>
+
+    <p>The EDP migration created an opening to fix this. Rebuilding the front end alongside the data layer meant we could establish shared conventions across all eight modules in one coordinated effort — rather than trying to retrofit consistency module by module while operators continued using the platform daily.</p>
+
+    <h2>The approach: lead with the system</h2>
+    <p>Eight modules in six months — the timeline imposed by leadership — meant the math only worked one way. Designing each module from scratch — its own patterns, its own components, its own conventions — would have taken eighteen months minimum, and would have recreated the exact problem the redesign was meant to solve. The only path to consistency at speed was to lead with the system.</p>
+
+    <p>Before designing anything, I needed to know what each module was actually for — and that wasn't documented anywhere I could pull from. There was no business analyst attached to the work. So I played the role myself: reaching out to product owners and stakeholders for each of the eight modules, eight separate requirements conversations, gathering what each one needed and writing it down so the design work had a brief to start from. The redesign couldn't be system-first if I didn't first understand what each module was trying to do.</p>
+
+    <p>Shell's SDS 2.0 (Shell Design System 2.0) already existed. It wasn't built for Terminal Cockpit specifically, but it was the design system the broader organization was standardizing on. Rather than building Terminal Cockpit's own patterns from zero, I extended SDS 2.0 — taking the components and conventions that already worked, adding what was missing, and pushing the additions back into the system so they were available beyond Terminal Cockpit.</p>
+
+    <p>Over six months, I contributed and extended roughly 130 components into SDS 2.0. The additions covered the patterns Terminal Cockpit needed but the system didn't yet have: specific table behaviors for the kind of dense operational data operators work with, status indicator conventions for terminal-specific states, filter patterns for cross-terminal data.</p>
+
+    <p>The system became the multiplier. Once a pattern was established and built — a standardized status badge, a frozen-column table, a filter group — applying it across the remaining modules was a question of composition rather than re-design. The work that would have been re-inventing eight times became deciding once and applying eight times.</p>
+
+    <p>That decision — to lead with the system rather than design the modules — is the reason eight modules shipped in six months with consistency intact.</p>
+
+    <h2>The system in action</h2>
+    <p>Three pattern families did most of the work of unifying Terminal Cockpit. None of them are individually clever — that's the point. Once they were established as SDS 2.0 conventions, every module inherited them automatically, and the platform began to feel like one product instead of eight.</p>
+
+    <h3>Filters</h3>
+    <p>Before the redesign, filtering worked differently on every module — different placements, different controls, different mental models. Operators had to re-learn how to narrow a view every time they switched context.</p>
+    <p>The new pattern places filters in the top header space, immediately above the data they affect. For modules with up to five filters, all of them live there in the open. When a module needs more than five, the additional filters move into a <em>Show filters</em> panel that opens below the navigation tabs. The controls themselves are standardized — single or multi-select dropdowns, depending on the field — so the interaction model is the same wherever the user is in the platform.</p>
+    <p>The threshold of five wasn't arbitrary. Past it, the top header starts competing with the navigation for attention, and the page begins to feel cluttered rather than scannable. Putting the overflow into a dedicated panel keeps the default view clean while preserving access to the full filter set.</p>
+
+    <h3>Navigation</h3>
+    <p>The old navigation was the clearest expression of how fragmented Terminal Cockpit had become — eight modules, no shared way to move between them, no consistent way to move <em>within</em> them.</p>
+    <p>The redesigned navigation has two layers. A top navigation bar handles platform-level context — the user, the terminal in scope, system actions. A side navigation below it lists the eight modules and lets the operator switch between them in one click. Within each module, sub-navigation tabs sit at the top of the content area, giving the user a consistent way to move through the module's sub-pages without changing the platform-level navigation.</p>
+    <p>The shape is conventional — sidebar plus tabs is a familiar enterprise pattern. That's deliberate. Operators were already cognitively loaded by the underlying complexity of terminal operations; the navigation didn't need to be inventive, it needed to disappear.</p>
+
+    <h3>KPI cards</h3>
+    <p>Most of the modules open with a row of KPI cards — the summary numbers that frame whatever the operator is about to look at in detail. <em>Active alarms, open outages, total volume, throughput, financial position.</em> Before the redesign, each module's KPI cards looked like they'd been designed in a different decade.</p>
+    <p>The new pattern standardizes the visible structure — consistent padding, the same corner radius across cards, the same typography hierarchy for the metric, the label, and any trend or change indicator. The result isn't a single dramatic difference on any one card; it's the cumulative effect of every module's top row looking like it belongs to the same product.</p>
+
+    <h2>Two decisions</h2>
+    <p>Two specific calls inside the redesign are worth pulling out, because they show what working in a system actually looks like at the level of decisions.</p>
+
+    <h3>Pinned columns in Stock Reconciliation</h3>
+    <p>Stock Reconciliation tracks when a terminal's recorded inventory doesn't match its physical inventory — when something is <em>out of tolerance</em>. The view is a 14-column table, dense by necessity. Most of the columns carry the details an operator needs to investigate a mismatch: timestamps, quantities, deltas, source records, sign-offs.</p>
+    <p>The problem with a 14-column table is that scrolling right to see more context means scrolling away from the two things that actually matter — <em>which tank are we looking at</em>, and <em>is it out of tolerance.</em> Once those two pieces of information leave the viewport, the rest of the row becomes harder to act on.</p>
+    <p>The decision was to pin two columns rather than one. <em>Tank number</em> pins to the left, <em>Out of tolerance</em> pins to the right. The implementation uses AG Grid's pinned column behavior. Whatever the operator scrolls to in the middle, the anchor points stay visible at both edges of the table — the <em>what am I looking at</em> on the left, the <em>does this need my attention</em> on the right.</p>
+    <p>The proposal was to pin both ends of the table rather than just the left. The team agreed immediately — the rationale was clear once it was on the table. The discipline wasn't in winning an argument; it was in being specific about what the operator's eye needed at all times, rather than defaulting to the single-pinned-column convention.</p>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Pinned-column+table" alt="Placeholder — Stock Reconciliation 14-column table with Tank Number pinned left, Out of Tolerance pinned right">
+      <figcaption>Pinned-column table — Stock Reconciliation's 14-column table with Tank Number pinned left, Out of Tolerance pinned right</figcaption>
+    </figure>
+
+    <h3>Status indicators across modules</h3>
+    <p>Before the redesign, statuses across modules were communicated through icons — an exclamation mark for one state, an x for another. Icons are dense and compact, but they require the operator to remember what each symbol means, and they don't survive being scaled down in dense tables or used by operators who haven't been with the system long.</p>
+    <p>The redesign moved to a text label plus color treatment, applied consistently across the ten distinct statuses Terminal Cockpit uses. <em>Active. Out of tolerance. Pending. Completed.</em> Each label spells out the state the data is in, and the color reinforces severity at a glance.</p>
+    <p>The visual lift was real. Picking ten colors that read distinctly at small sizes, work in dense table contexts, and meet accessibility contrast requirements — that's a constrained problem. The reason it was worth the effort is that once the pattern was set in SDS 2.0, every module showing status data inherited it. A status badge in Alarms now reads the same way as one in TOR, which reads the same way as one in Stock Reconciliation. The operator no longer translates between modules.</p>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=10-status+indicator+set" alt="Placeholder — 10-status indicator set, text label + colour treatment, standardised across modules">
+      <figcaption>10-status indicator set — text label + colour treatment, standardised across modules</figcaption>
+    </figure>
+
+    <h2>The 8 modules at a glance</h2>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=The+8+modules+at+a+glance" alt="Placeholder — 4x2 grid showing all 8 redesigned modules">
+      <figcaption>The 8 modules at a glance — 4×2 grid showing all redesigned modules</figcaption>
+    </figure>
+
+    <p>Eight modules shipped over six months, each applying the patterns established in SDS 2.0 to a specific operational need.</p>
+
+    <p><strong>Stock Reconciliation.</strong> Tracks when a terminal's recorded inventory doesn't match its physical inventory. The pinned-column pattern in this module became the template for dense investigative tables across Terminal Cockpit.</p>
+    <p><strong>Terminal Outage Report (TOR).</strong> Lets terminal teams report outages and manage existing reports — the operational record of when a terminal can't run at full capacity and why.</p>
+    <p><strong>Bio Fuels.</strong> Surfaces biofuels data for reporting and oversight. Operationally specialized, but shares the same table, filter, and status patterns as the rest of the platform.</p>
+    <p><strong>Alarms.</strong> Aggregates alarms data across the global terminal network. One of the modules that most benefited from the standardized status treatment — operators scanning hundreds of alarms a day needed to read state at a glance.</p>
+    <p><strong>Assets.</strong> Provides assets and inventory visibility across the network. Cross-terminal scope, dense data, heavy reliance on the new filter and table patterns.</p>
+    <p><strong>Notional PnL.</strong> Shows financial performance across the terminal network. Operationally adjacent to trading but kept at the terminal-management altitude, with KPI cards summarizing position at the top of the module.</p>
+    <p><strong>Rail Performance.</strong> Tracks rail performance for terminals served by rail — currently scoped to Germany. Specialized in geography but consistent with the rest of the platform in pattern.</p>
+    <p><strong>Gate to Gate.</strong> Surfaces truck movement data: gantry times, wait times, fill times. Operational ground truth for how product physically moves through the terminal.</p>
+
+    <h2>Delivered</h2>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Delivered" alt="Placeholder — delivered imagery">
+      <figcaption>Delivered — handed to engineering with phased rollout to follow</figcaption>
+    </figure>
+
+    <p>The redesign is complete and handed to engineering, with phased rollout across Shell's terminal network to follow.</p>
+    <p>What was delivered:</p>
+    <p><strong>Eight modules, six months.</strong> Complete redesigns of the full Terminal Cockpit suite — Stock Reconciliation, TOR, Bio Fuels, Alarms, Assets, Notional PnL, Rail Performance, Gate to Gate — designed for migration onto EDP within the timeline leadership set.</p>
+    <p><strong>~130 components.</strong> A library of around 130 components built and extended for SDS 2.0, ready to merge into Shell's design system — the filter groups, status treatments, table behaviors, and KPI cards that give the eight modules their shared language.</p>
+    <p><strong>One consistent platform where there had been eight.</strong> Across the redesigned suite, filters work the same way in every module, a status means the same thing in Alarms as it does in Stock Reconciliation, and navigation behaves predictably wherever an operator is. Designed as a single product rather than eight.</p>
+
+    <h2>Closing</h2>
+    <p>Terminal Cockpit was, at its core, a problem of consistency at scale under a fixed timeline. Eight modules, six months, no business analyst, an inherited platform that had drifted out of alignment with itself.</p>
+    <p>The approach that made it tractable wasn't designing harder — it was leading with the system. Gathering the requirements myself, extending SDS 2.0 rather than reinventing it, and establishing a small set of patterns that every module could inherit. Decide once, apply eight times.</p>
+    <p>It's the work that makes a large, complex platform feel like one product. And it's the work I'm most interested in doing more of.</p>
+    <p>Since this redesign, Terminal Cockpit's modules are being absorbed into the Terminal Performance Center — the wider platform unifying financial dashboards, ORION, and these operator apps into one product. The patterns established here become the operational layer of that larger system.</p>
+
+  </div>
+</div>
+
+<section class="cs-next">
+  <div class="inner">
+    <div>
+      <p>Next case study</p>
+      <h3>Shell Design System →</h3>
+    </div>
+    <a href="shell-design-system.html" class="btn btn-dark">View →</a>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

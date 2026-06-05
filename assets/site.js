@@ -41,26 +41,21 @@
         <button class="drop-toggle" aria-expanded="false" aria-haspopup="true">Shell <span class="drop-arrow">▾</span></button>
         <ul class="dropdown">
           <li><a href="${root}work/shell-tpc.html">Terminal Performance Center</a></li>
-          <li><a href="${root}work/orion.html">ORION — Inventory Intelligence</a></li>
+          <li><a href="${root}work/shell-cockpit.html">Terminal Cockpit Redesign</a></li>
+          <li><a href="${root}work/shell-design-system.html">Shell Design System</a></li>
         </ul>
       </li>
       <li class="has-drop">
         <button class="drop-toggle" aria-expanded="false" aria-haspopup="true">Axi <span class="drop-arrow">▾</span></button>
         <ul class="dropdown">
-          <li><a href="${root}work/atp-mobile.html">ATP Mobile</a></li>
-          <li><a href="${root}work/atp-web.html">ATP Web</a></li>
-          <li><a href="${root}work/axi-crypto.html">Crypto Trading</a></li>
-          <li><a href="${root}work/axi-design-system.html">Design System</a></li>
+          <li><a href="${root}work/atp-mobile.html">Axi Mobile</a></li>
+          <li><a href="${root}work/atp-web.html">Axi Web</a></li>
+          <li><a href="${root}work/axi-crypto.html">Axi Crypto</a></li>
+          <li><a href="${root}work/axi-client-portal.html">Axi Client Portal</a></li>
+          <li><a href="${root}work/axi-design-system.html">Axi Design System</a></li>
         </ul>
       </li>
-      <li class="has-drop">
-        <button class="drop-toggle" aria-expanded="false" aria-haspopup="true">GoldPesa <span class="drop-arrow">▾</span></button>
-        <ul class="dropdown">
-          <li><a href="${root}work/goldpesa-uniswap.html">Uniswap Integration</a></li>
-          <li><a href="${root}work/goldpesa-staking.html">Staking Platform</a></li>
-          <li><a href="${root}work/goldpesa-polygon.html">Polygon Bridge</a></li>
-        </ul>
-      </li>
+      <li><a href="${root}work/goldpesa.html">GoldPesa</a></li>
       <li><a href="${root}about.html" data-p="about">About</a></li>
       <li><a href="${root}skills.html" data-p="skills">Skills</a></li>
       <li class="mobile-cta"><a href="mailto:zahid@zpirani.com">Get in touch →</a></li>

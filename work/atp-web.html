@@ -3,13 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>ATP Web — Zahid Pirani</title>
+<title>Axi Web — Zahid Pirani</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
-
-<script src="https://mcp.figma.com/mcp/html-to-design/capture.js"></script>
 </head>
 <body>
 <div id="site-nav"></div>
@@ -17,111 +15,145 @@
 <section class="cs-hero">
   <div class="wrap">
     <div class="eyebrow">
-      <span>Axi · 2022–2025</span>
-      <span>Web App</span>
-      <span>CFD Trading</span>
+      <span class="tag accent">Axi · Jun 2023 – Sep 2024</span>
+      <span class="tag accent" style="margin-left:8px;">Web App</span>
+      <span class="tag accent" style="margin-left:8px;">TradingView</span>
     </div>
-    <h1>ATP Web</h1>
-    <p class="lead">Redesigned the web-based trading platform for Axi's retail clients — applying modular design principles to improve consistency across CFD markets and accelerate engineering delivery globally.</p>
+    <h1>Axi Web</h1>
+    <p class="lead">Extending ATP's mobile-first design language to desktop — TradingView integration, Portfolio, and an in-flow funding pattern.</p>
     <div class="cs-meta">
       <div class="meta-item"><label>Company</label><span>Axi</span></div>
       <div class="meta-item"><label>Role</label><span>Senior Product Designer</span></div>
-      <div class="meta-item"><label>Platform</label><span>Web</span></div>
-      <div class="meta-item"><label>Markets</label><span>Forex · Commodities · Indices · Crypto · Shares</span></div>
+      <div class="meta-item"><label>Timeline</label><span>15 months</span></div>
+      <div class="meta-item"><label>Surfaces</label><span>Mobile + Web</span></div>
+      <div class="meta-item"><label>Depth additions</label><span>3</span></div>
     </div>
   </div>
 </section>
 
 <div class="cs-hero-img">
-  <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&h=560&fit=crop&auto=format&q=80" alt="ATP Web — CFD trading platform" loading="lazy">
+  <img src="https://placehold.co/1400x560/1D1F28/8080A0?text=Hero+%E2%80%94+ATP+Web" alt="Placeholder — ATP Web: TradingView-integrated trading interface" loading="lazy">
 </div>
 
 <div class="cs-body">
   <div class="wrap-narrow">
 
-    <h2>Overview</h2>
-    <p>ATP Web is Axi's browser-based trading platform for retail CFD clients. I led the redesign of the CFD trading interfaces across all markets — Forex, Commodities, Indices, Crypto, and Shares — applying modular design principles to create a more consistent, scalable product.</p>
+    <p>ATP launched mobile-first in 2021. For more than two years, mobile was the only ATP surface; every interaction model and design pattern was proven there first. When ATP Web launched in June 2023, the central decision was that web would extend mobile, not replace it.</p>
+    <p>I led the design of ATP Web's launch and core surfaces over 15 months, alongside ongoing mobile responsibilities. Three depth additions defined the work: the Main Trading Interface (with TradingView integration), Portfolio, and a Funding journey embedded inside the trade flow. I worked with 2 designers on ATP, 3 Product Managers, and 4 engineering teams across the UK, India, and the Philippines.</p>
 
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">trade.axi.com / platform / overview</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — full platform overview showing multi-market layout" loading="lazy">
-      </div>
-      <p class="mockup-caption">Platform overview — unified layout serving Forex, Commodities, Indices, Crypto, and Shares from a single interface</p>
-    </div>
+    <h2>Context</h2>
+    <p>ATP launched <strong>mobile-first</strong> in 2021. For more than two years, mobile was the only ATP surface; every interaction model and design pattern was proven there first.</p>
+    <p><strong>ATP Web launched in June 2023</strong> to address what mobile genuinely couldn't do: deep technical analysis, larger data views, and multi-screen workflows for active traders. I led the design from launch through September 2024 — 15 months of dedicated web work alongside ongoing mobile responsibilities.</p>
+    <p>The central decision: <strong>web would extend mobile, not replace it.</strong> Web inherited ATP's design language, interaction patterns, IA, and visual identity — then added what desktop's screen real estate, input model, and continuous attention made possible.</p>
 
-    <h2>The Challenge</h2>
-    <p>The web platform had grown organically over years, resulting in inconsistent UI patterns across different market types. Traders switching between Forex and Crypto, for example, encountered different interaction models for the same core actions — placing trades, reviewing positions, and managing orders.</p>
-    <p>This inconsistency slowed down both users and engineers. Designers were rebuilding similar components from scratch for each market, and the engineering teams across the UK, India, and Philippines were working from inconsistent specs.</p>
+    <h2>The challenge</h2>
+    <p>Three problems shaped every web design decision:</p>
+    <ol>
+      <li><strong>Honour the mobile-first identity.</strong> Mobile had carried ATP for two years. Existing traders had patterns burned into their hands. Web couldn't feel like a different product.</li>
+      <li><strong>Deliver the professional-grade tools desktop traders actually need.</strong> Advanced charting, larger data views, multi-screen workflows — the things mobile couldn't deliver.</li>
+      <li><strong>Avoid feature-parity-as-translation traps.</strong> A naive port of every mobile screen would produce a desktop product that felt like a tablet app. Each surface had to be reconsidered for what desktop could actually deliver — even when the underlying flow was the same.</li>
+    </ol>
 
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">trade.axi.com / platform / forex / EURUSD</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — Forex market view showing layout inconsistencies before redesign" loading="lazy">
-      </div>
-      <p class="mockup-caption">Before — Forex market view with component patterns that diverged from Crypto and Indices equivalents</p>
-    </div>
-
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">trade.axi.com / platform / crypto / BTCUSD</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — Crypto market view showing different interaction model for same actions" loading="lazy">
-      </div>
-      <p class="mockup-caption">Before — Crypto view using a different order ticket, chart controls, and position display from Forex</p>
-    </div>
-
-    <h2>Approach</h2>
+    <h2>What I inherited from Mobile</h2>
+    <p>Web didn't start from zero. Mobile had already established:</p>
     <ul>
-      <li>Audited the existing web platform to catalogue inconsistencies and redundancies across all market types</li>
-      <li>Developed a modular component system that could adapt to the specific data needs of each asset class without breaking the shared interaction model</li>
-      <li>Partnered with PMs and engineers to align on the component library and ensure it was buildable and maintainable across teams</li>
-      <li>Facilitated design workshops to guide product strategy and unify stakeholder vision across regions</li>
+      <li>The <strong>Axi Design System</strong> (built in parallel with mobile, governing colour, type, components, motion)</li>
+      <li>Information architecture for the core trading product (markets → order → position → history)</li>
+      <li>Onboarding flow and jurisdiction logic (FCA, CySEC, ASIC, DFSA, FMA, W-8BEN for US, conditional Jumio for high-risk)</li>
+      <li>Visual identity and tone of voice</li>
+      <li>The mobile cohort metrics (−35% setup, 2× conversion) that proved the patterns worked</li>
+    </ul>
+    <p>The job on Web was to <strong>carry these forward</strong>, not relitigate them.</p>
+
+    <h2>The three depth additions</h2>
+
+    <h3>1. Main Trading Interface</h3>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Main+Trading+Interface" alt="Placeholder — Chart + order ticket side-by-side, TradingView integration">
+      <figcaption>Main Trading Interface — chart + order ticket side-by-side, TradingView integration</figcaption>
+    </figure>
+
+    <p>The core trading workspace — where traders browse markets, analyse instruments, and place trades. The two ingredients that made web's interface distinct were a more visible markets view and a <strong>responsive order ticket</strong> that lived alongside the chart, rather than appearing as a modal as it does on mobile.</p>
+
+    <p><strong>TradingView integration</strong> sat at the heart of this interface — the industry-standard charting platform, integrated so traders had access to professional-grade indicators, drawing tools, and timeframes without leaving Axi.</p>
+
+    <!--
+    [TradingView specifics — to fill]
+    - Embedded chart or custom wrapper around their library?
+    - Theming — did the chart match Axi's visual identity, or stay TradingView-branded?
+    - Could traders place orders directly from the chart (right-click a price level; drag SL/TP lines)?
+    - Which indicators / drawing tools were enabled by default vs. curated out?
+
+    [Order ticket and markets view — to fill]
+    - The order ticket lived alongside the chart — what specific layout / interaction patterns?
+    - Markets view — categorisation, search, filters?
+    - Volatility-aware patterns. Speed matters in fast markets.
+    -->
+
+    <h3>2. Portfolio</h3>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Portfolio" alt="Placeholder — Open positions, balances, and overall performance in a single hub">
+      <figcaption>Portfolio — open positions, balances, and overall performance in a single hub</figcaption>
+    </figure>
+
+    <p>Mobile's position management was inevitably constrained — small screen, limited filters, summary views. On Web, I introduced <strong>Portfolio</strong> as a central hub: open positions, balances, and overall performance in one view, with clear hierarchy and quick actions (close, modify) inline.</p>
+    <p>The design emphasised making complex financial data approachable — visible by default but not overwhelming, with the depth tucked behind drill-downs and inline action surfaces.</p>
+
+    <!--
+    [Portfolio specifics — to fill]
+    - Layout choices — single list, grouped by asset, split by open / closed?
+    - Hierarchy decisions — what's surfaced by default, what's behind interaction?
+    - Real-time P&L across many positions without the screen feeling like a stock ticker
+    - The one design call worth telling
+    -->
+
+    <h3>3. In-Flow Funding</h3>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=In-Flow+Funding+dialog" alt="Placeholder — Inline funding when trader hits insufficient funds mid-trade">
+      <figcaption>In-Flow Funding dialog — inline funding when trader hits insufficient funds mid-trade</figcaption>
+    </figure>
+
+    <p>When a trader attempts to execute a trade but <strong>lacks sufficient funds</strong>, mobile and most competitor platforms surface a dead-end: "insufficient funds, please deposit." On Web, I designed an <strong>inline funding dialog</strong> that presents the user with options to use a saved payment method or choose an alternative funding method — embedded inside the trade flow, not separated from it.</p>
+    <p>The design preserves the trader's momentum: they can fund and complete the trade without losing context, watchlists, or the order they were placing. It removes the most common abandonment point in any mid-trade interaction.</p>
+
+    <!--
+    [In-Flow Funding specifics — to fill]
+    - Saved payment methods vs. alternative methods — UX hierarchy choices
+    - Returning to the trade flow after funding completes
+    - Failure / hold / declined-payment recovery patterns
+    - Stakeholder push-back, if any — was building funding logic into the trade ticket controversial?
+    -->
+
+    <h2>Outcomes</h2>
+    <p><em>ATP Web was instrumented in Amplitude, but I retain only the mobile cohort data — the same caveat from the Mobile case study. Web outcomes here are framed qualitatively.</em></p>
+    <ul>
+      <li><strong>Launched ATP Web in June 2023</strong> as a feature-parity desktop surface from day one — no extended beta or feature gap that mobile users couldn't recognise.</li>
+      <li><strong>Inherited and preserved</strong> the mobile-cohort onboarding metrics (−35% setup, 2× conversion) through to the web flow.</li>
+      <li><strong>Extended the Axi Design System</strong> across two surfaces under one design language.</li>
+      <li><strong>Pioneered an in-flow funding pattern</strong> that removed mid-trade abandonment cliffs — a specific design call, not a port from mobile.</li>
     </ul>
 
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">axi.design / components / order-ticket / specs</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — component audit mapping shared vs. market-specific elements" loading="lazy">
-      </div>
-      <p class="mockup-caption">Component audit — mapping shared interaction patterns vs. market-specific data needs across all asset classes</p>
-    </div>
+    <h2>Reflection</h2>
+    <!--
+    [Reflection — write 2–3 paragraphs in your voice]
+    - What designing for a second surface (after two years of mobile-only) taught you about design-system discipline
+    - The TradingView integration — what surprised you, what you'd do differently
+    - The In-Flow Funding decision — was it controversial? Did stakeholders push back on building funding logic into the trade ticket?
+    - The hardest single design call on web
+    -->
+    <p style="color: var(--muted-lt); font-style: italic;">Reflection to be drafted.</p>
 
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">trade.axi.com / platform / forex / EURUSD</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — redesigned unified trading platform after modular redesign" loading="lazy">
-      </div>
-      <p class="mockup-caption">After — same modular layout, order ticket, and chart controls now shared across every market type</p>
-    </div>
-
-    <h2>Outcome</h2>
-    <p>The modular redesign improved design consistency across all CFD markets and accelerated development speed by reducing rework. The same component foundations were then extended into the ATP Mobile and Axi Design System work.</p>
-
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">trade.axi.com / platform / indices / SPX500</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&h=700&fit=crop&auto=format&q=80" alt="ATP Web — Indices view using the same shared modular layout" loading="lazy">
-      </div>
-      <p class="mockup-caption">Indices view — same component foundations as Forex and Crypto, adapted for indices-specific data</p>
-    </div>
+    <!--
+    [Open items]
+    1. TradingView integration — fill in 2–3 sentences on what made your integration distinctive (embed vs. wrapper, theming, in-chart order placement).
+    2. Order ticket and markets view — specifics on the layout and interaction choices.
+    3. Portfolio depth — 2–3 sentences on layout, hierarchy, real-time P&L treatment.
+    4. In-Flow Funding — 1–2 more sentences on the distinctive design call and any stakeholder pushback.
+    5. Qualitative web outcomes — hunt for any user or business outcome you can attach.
+    6. Reflection in your voice.
+    7. Swap in real hero visuals for each placeholder.
+    8. Cross-references to ATP Mobile, Axi Design System, and the separate Trade History page.
+    -->
 
   </div>
 </div>

@@ -8,8 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
-
-<script src="https://mcp.figma.com/mcp/html-to-design/capture.js"></script>
 </head>
 <body>
 <div id="site-nav"></div>
@@ -17,159 +15,121 @@
 <section class="cs-hero">
   <div class="wrap">
     <div class="eyebrow">
-      <span>Shell · 2025–Present</span>
-      <span>Enterprise UX</span>
-      <span>Multi-Persona</span>
-      <span>Data Visualisation</span>
+      <span class="tag accent">Shell · Nov 2025 – Present</span>
+      <span class="tag accent" style="margin-left:8px;">Enterprise UX</span>
+      <span class="tag accent" style="margin-left:8px;">Discovery</span>
     </div>
     <h1>Terminal Performance Center</h1>
-    <p class="lead">A unified platform giving Shell's senior leaders real-time visibility into the operational and financial health of 100+ terminals worldwide — turning raw Databricks data into decisions about which terminals to invest in, optimise, or shut down.</p>
+    <p class="lead">A unified platform giving Shell one place to understand and act on 100+ terminals worldwide — converging financial dashboards, ORION, and Terminal Cockpit into one product.</p>
     <div class="cs-meta">
-      <div class="meta-item"><label>Company</label><span>Shell</span></div>
-      <div class="meta-item"><label>Role</label><span>Senior Product Designer</span></div>
-      <div class="meta-item"><label>Collaborators</label><span>BAs, Product Owners, Engineers</span></div>
-      <div class="meta-item"><label>Scale</label><span>100+ terminals globally</span></div>
-      <div class="meta-item"><label>Data Layer</label><span>Databricks</span></div>
+      <div class="meta-item"><label>Company</label><span>Shell, Trading &amp; Supply</span></div>
+      <div class="meta-item"><label>Role</label><span>Senior Product Designer (sole designer)</span></div>
+      <div class="meta-item"><label>Scope</label><span>100+ terminals globally</span></div>
+      <div class="meta-item"><label>Personas</label><span>5 across 3 pillars</span></div>
+      <div class="meta-item"><label>Stage</label><span>Discovery → wireframing</span></div>
     </div>
   </div>
 </section>
 
 <div class="cs-hero-img">
-  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&h=560&fit=crop&auto=format&q=80" alt="Terminal Performance Center — enterprise analytics dashboard" loading="lazy">
+  <img src="https://placehold.co/1400x560/1D1F28/8080A0?text=Hero+%E2%80%94+Terminal+Performance+Center" alt="Placeholder — Terminal Performance Center: unified platform converging financial dashboards, ORION, and Terminal Cockpit" loading="lazy">
 </div>
 
 <div class="cs-body">
   <div class="wrap-narrow">
 
-    <h2>The Problem</h2>
-    <p>Shell's global terminal and LNG business generates enormous volumes of operational and financial data — but in 2025, that data was scattered across siloed tools, manual reports, and fragmented systems. Senior leaders had no single view of what was actually happening across the portfolio.</p>
-    <p>In parallel, Shell was investing heavily in Databricks to centralise and stream data from terminals worldwide — covering everything from tank inventory and throughput to OPEX, HSSE events, and P&L. The infrastructure existed. What didn't exist was a way for leaders to act on it.</p>
-    <p>The question put to our team: <strong>what do we do with all this data, and how do we turn it into decisions?</strong></p>
+    <p style="font-style: italic; color: var(--muted-lt); border-left: 2px solid var(--accent); padding-left: 16px;">The project is currently in discovery. I'm shaping the problem and the structure before the wider team forms.</p>
 
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">sharepoint.shell.com / terminal-reports / Q1-2025</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=700&fit=crop&auto=format&q=80" alt="Before state — fragmented manual reporting across siloed tools" loading="lazy">
-      </div>
-      <p class="mockup-caption">Before — 12+ fragmented tools, manual packs, and no single source of truth for terminal performance</p>
-    </div>
+    <h2>Why now</h2>
+    <p>Shell is large enough that strong solutions get built in isolation. Voltron (Financial reporting), ORION (built by the US trading team), and the Terminal Cockpit modules each solved a real problem on their own — but independently, with no shared home. TPC is the decision to converge those silos into one platform rather than let them keep diverging.</p>
+
+    <h2>The Problem</h2>
+    <p>There's no single, layered view of how Shell's terminals are performing. Financial performance is hard to read across levels. Live operational insight — inventory, ownership where terminal space is leased, products held per terminal, and vessel movements — lives in ORION. Operator tooling lives in the separate Terminal Cockpit modules. Each is useful alone; none of them connect.</p>
 
     <h2>My Role</h2>
-    <p>I was embedded in a cross-functional team of Business Analysts, Product Owners, and developers as the lead designer. My job was to work with this team to determine which operational and financial data capabilities were most valuable, shape them into a coherent product, and design the experience that senior leaders would actually use.</p>
-    <p>This wasn't a straightforward feature build. It required making sense of a sprawling data landscape, aligning stakeholders across commercial, operations, HSSE, and finance, and translating complex capability discussions into clear product decisions.</p>
+    <p>I'm the sole designer, leading discovery. With BAs and engineers not yet onboarded, the early work of making sense of the problem — process flows, personas, primary research, and pattern exploration — has been entirely design-led.</p>
 
-    <h2>Discovery & Capability Mapping</h2>
-    <p>The first phase was understanding what data was actually available and what decisions it could support. Working closely with BAs and the Databricks team, we mapped the data capabilities coming through the pipeline:</p>
+    <h2>The core design challenge</h2>
+    <p>Five personas operate at very different altitudes, and the three systems converging into TPC each carry their own internal logic. The hard problem: how do you make one coherent platform without flattening it into a one-size-fits-all dashboard that serves nobody?</p>
+
+    <h2>Three converging pillars</h2>
     <ul>
-      <li>Real-time tank inventory and utilisation across terminals</li>
-      <li>Throughput and operational performance vs. benchmarks</li>
-      <li>OPEX and unit cost by terminal and region</li>
-      <li>HSSE incident rates and compliance status</li>
-      <li>P&amp;L linkage — revenue, direct costs, and notional profit at terminal level</li>
-      <li>Structural savings tracking (FIT4, Terminal Transformation initiatives)</li>
-    </ul>
-    <p>With the BAs, I facilitated workshops to prioritise which capabilities were most decision-critical and which personas needed them. The output was a capability-to-persona matrix that became the backbone of the product.</p>
-
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">miro.com / tpc-capability-persona-matrix</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=700&fit=crop&auto=format&q=80" alt="Capability-to-persona matrix mapping data capabilities to decision-makers" loading="lazy">
-      </div>
-      <p class="mockup-caption">Capability-to-persona matrix — mapping Databricks data streams to decision-critical use cases per role</p>
-    </div>
-
-    <h2>The Core Design Challenge</h2>
-    <p>The platform needed to serve radically different users — from terminal operators reviewing live asset status, to traders managing customer positions, to VPs making portfolio-level investment calls. A one-size-fits-all dashboard would serve nobody well.</p>
-    <p>The solution was a role-based architecture: a single platform with purpose-built landing pages and navigation paths for each persona, all drawing from the same Databricks data layer. Every role gets the right view of the same source of truth.</p>
-
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">tpc.shell.com / portfolio / overview</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&h=700&fit=crop&auto=format&q=80" alt="TPC — VP portfolio overview across all 100+ terminals" loading="lazy">
-      </div>
-      <p class="mockup-caption">VP Operations view — portfolio health across 100+ terminals, ranked by underperformance signal</p>
-    </div>
-
-    <div class="cs-stat-row">
-      <div class="cs-stat">
-        <div class="num">100+</div>
-        <div class="label">Terminals across the global portfolio</div>
-      </div>
-      <div class="cs-stat">
-        <div class="num">&gt;80%</div>
-        <div class="label">Target monthly adoption across all persona groups</div>
-      </div>
-      <div class="cs-stat">
-        <div class="num">&gt;50%</div>
-        <div class="label">Target reduction in time spent preparing performance packs</div>
-      </div>
-    </div>
-
-    <h2>What the Platform Enables</h2>
-    <p>The Terminal Performance Center gives senior leaders — VPs of Operations, VPs of Finance, and regional executives — a single view of portfolio health. Crucially, it surfaces the data needed to answer the hardest business questions:</p>
-    <ul>
-      <li><strong>Which terminals are performing below benchmark?</strong> Utilisation, throughput, and OPEX data make underperformance visible at a glance.</li>
-      <li><strong>Where is structural savings delivery off-track?</strong> FIT4 and Terminal Transformation initiatives are tracked against targets with clear variance indicators.</li>
-      <li><strong>Which terminals are loss-making?</strong> Terminal-level P&amp;L, linked to operational data, gives finance leaders the evidence to make divestment recommendations.</li>
-      <li><strong>What are the HSSE risks?</strong> Incident rates, near-misses, and audit completion are surfaced alongside operational and financial data — because safety impacts cost.</li>
+      <li><strong>Financial performance dashboards</strong> — terminal financial performance at global, cluster, and terminal levels.</li>
+      <li><strong>ORION</strong> — the US trading team's dashboards: live inventory across terminals, ownership breakdown for leased space, product visibility per terminal, and vessel tracking/movements.</li>
+      <li><strong>Terminal apps</strong> — the operator modules from Terminal Cockpit, so terminal teams work inside the same platform.</li>
     </ul>
 
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">tpc.shell.com / terminal / carson / opex</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=700&fit=crop&auto=format&q=80" alt="TPC — terminal OPEX drill-down with variance vs benchmark" loading="lazy">
-      </div>
-      <p class="mockup-caption">OPEX drill-down — unit cost vs. benchmark with variance trends, by terminal and region</p>
+    <h2>The persona model (developed in discovery)</h2>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Persona+Model+%E2%80%94+5+personas+x+3+pillars" alt="Placeholder — Persona model: 5 personas across 3 pillars (Executive VP, District Operations Manager, Trader, Terminal Manager, Terminal Operator)">
+      <figcaption>Persona model — 5 personas across 3 pillars</figcaption>
+    </figure>
+
+    <div class="cs-table-wrap" style="margin: 24px 0;">
+      <table class="cs-table" style="width:100%; border-collapse: collapse; font-size: 14px;">
+        <thead>
+          <tr style="border-bottom: 1px solid var(--rule);">
+            <th style="text-align:left; padding: 10px 12px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-lt);">Persona</th>
+            <th style="text-align:left; padding: 10px 12px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-lt);">What they need</th>
+            <th style="text-align:left; padding: 10px 12px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-lt);">Pillar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 12px;">Executive VP</td><td style="padding: 12px; color: var(--muted);">Global financial performance</td><td style="padding: 12px; color: var(--muted);">Financial dashboards</td></tr>
+          <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 12px;">District Operations Manager</td><td style="padding: 12px; color: var(--muted);">Cluster financial performance</td><td style="padding: 12px; color: var(--muted);">Financial dashboards</td></tr>
+          <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 12px;">Trader</td><td style="padding: 12px; color: var(--muted);">Live inventory, ownership &amp; vessels</td><td style="padding: 12px; color: var(--muted);">ORION</td></tr>
+          <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 12px;">Terminal Manager</td><td style="padding: 12px; color: var(--muted);">Operational tooling</td><td style="padding: 12px; color: var(--muted);">Terminal apps</td></tr>
+          <tr><td style="padding: 12px;">Terminal Operator</td><td style="padding: 12px; color: var(--muted);">Operational tooling</td><td style="padding: 12px; color: var(--muted);">Terminal apps</td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">tpc.shell.com / terminal / carson / pl</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&h=700&fit=crop&auto=format&q=80" alt="TPC — terminal P&L view linking revenue, direct costs, and notional profit" loading="lazy">
-      </div>
-      <p class="mockup-caption">P&amp;L view — revenue, direct costs, and notional profit at terminal level with divestment signal indicators</p>
-    </div>
+    <h2>Research: "A day in the life of a terminal"</h2>
 
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">tpc.shell.com / terminal / rotterdam / hsse</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=700&fit=crop&auto=format&q=80" alt="TPC — HSSE compliance dashboard showing incident rates and audit completion" loading="lazy">
-      </div>
-      <p class="mockup-caption">HSSE dashboard — incident rates, near-miss counts, and audit completion surfaced alongside operational data</p>
-    </div>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Day-in-the-life+journey" alt="Placeholder — Day-in-the-life journey: control-room operator's full shift, from trading nominations through handover">
+      <figcaption>Day-in-the-life journey — control-room operator's full shift, from trading nominations through handover</figcaption>
+    </figure>
 
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">tpc.shell.com / savings / fit4 / progress</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&h=700&fit=crop&auto=format&q=80" alt="TPC — structural savings tracker for FIT4 and Terminal Transformation initiatives" loading="lazy">
-      </div>
-      <p class="mockup-caption">Savings tracker — FIT4 and Terminal Transformation delivery vs. target, with variance and risk flags</p>
-    </div>
+    <p>To ground the operational personas, I ran a primary research study mapping a control-room operator's full shift — from trading nominations through execution, reconciliation, and handover. The as-is journey surfaced a consistent pattern of manual, paper-and-fax-dependent work: nominations arriving by fax, instructions hand-copied onto a physical whiteboard, rail and tank data re-entered across disconnected systems, and triple reconciliation by hand.</p>
 
-    <h2>Outcome</h2>
-    <p>The Terminal Performance Center replaced 12+ fragmented tools with a single role-based platform. By working with the BA and engineering team to define which Databricks capabilities to expose first, we prioritised the highest-value data for senior decision-makers while building a foundation that scales to new terminals, new personas, and new data sources over time.</p>
-    <p>The platform positions Shell's leadership to move from lagging, manual reporting to near real-time, data-led decisions — including the ability to identify terminals that are not commercially viable and build the evidence case for shutting them down.</p>
+    <p>The headline pain points: heavy duplication (the same data rewritten across board, shift report, reconciliation, and email), communication gaps (fax dependency with no guaranteed acknowledgment), system fragmentation (HMI, rail, scheduling, and email all unintegrated), and the operational risk that comes with manual coordination.</p>
+
+    <p style="font-style: italic; color: var(--muted-lt); border-left: 2px solid var(--accent); padding-left: 16px;">The key insight that reframed the project: the operation isn't broken — it's highly reliable, but manual. The opportunity isn't to rip out the process; it's to digitize without losing the physical "signal" operators depend on — the sound of the fax, the board on the wall. That points to a hybrid approach (digital data plus visual, ambient cues) as the path to adoption.</p>
+
+    <p><em>Full as-is journey, pain-point map, and future-state vision captured in FigJam.</em></p>
+
+    <h2>Discovery artifacts</h2>
+    <p>Process-flow mapping across the three pillars, persona development, the day-in-the-life research above, and competitive/pattern scans (Mobbin and similar) to inform direction.</p>
+    <p><em>[Process flows, persona docs, and research visuals to be embedded here.]</em></p>
+
+    <h2>Pillar 2 in detail — ORION (the trading intelligence being absorbed)</h2>
+    <p>Unlike the financial dashboards and the converged operator apps, ORION already exists as built, trader-facing work — designed end-to-end with Shell's US trading team. It's the most mature of the three pillars, and its screens are being brought directly into TPC as the Trader's layer. The context below frames the ORION screens now being imported.</p>
+
+    <p>ORION covers two capability areas:</p>
+
+    <h3>Inventory Intelligence</h3>
+    <p>A commercial view of terminal inventory built on one reframe: traders don't think in tanks, they think in customers. The data architecture was flipped from a technical view (Tank 101 holds X) to a commercial one (Customer A has X capacity left). The hero view is a high-density customer-holdings chart; the ATS (Available to Sell) engine distills contracted-vs-actual, min/max thresholds, and safety heels into a single actionable number; and a 7/30-day trajectory chart shows when a customer will hit the ceiling of their capacity. Designing for data lineage and transparency was essential to win the trust of terminal staff skeptical of digital dashboards.</p>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=ORION+%E2%80%94+Inventory+Intelligence" alt="Placeholder — ORION Inventory Intelligence screens">
+      <figcaption>ORION — Inventory Intelligence screens</figcaption>
+    </figure>
+
+    <h3>Vessel Movements</h3>
+    <p>A real-time berth scheduling and tracking system built on a dual-view architecture — a Gantt scheduler for temporal planning and a live data table for operational depth, linked by one shared status-color language (teal berthed, amber inbound, coral delayed, grey departed). Conflict detection is built into the Gantt's visual logic; net-change logic projects inventory levels post-movement; and trust markers (data-freshness indicators, graceful handling of estimated vs confirmed ETAs) carry users through the transition from spreadsheets to live data. The module is explicitly designed for shift handovers.</p>
+
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=ORION+%E2%80%94+Vessel+Movements" alt="Placeholder — ORION Vessel Movements screens">
+      <figcaption>ORION — Vessel Movements screens</figcaption>
+    </figure>
+
+    <h3>Why this matters for TPC</h3>
+    <p>ORION's status-color language is consistent with the standardized status treatment from the Terminal Cockpit redesign — so a status reads the same way whether a trader is looking at a vessel in ORION or an operator is looking at an alarm in a terminal app. That shared language is part of what makes convergence into one coherent platform possible rather than three systems sharing a shell. Full ORION case study (Inventory Intelligence + Vessel Movements) is documented separately.</p>
+
+    <h2>Where it's going</h2>
+    <p>Moving from discovery into wireframing — translating the persona model, process flows, and research insights into the first concrete screens. ORION's existing screens are being brought in directly as the Trader pillar, while the financial dashboards and converged operator apps are designed out from the discovery work above.</p>
 
   </div>
 </div>
@@ -178,9 +138,9 @@
   <div class="inner">
     <div>
       <p>Next case study</p>
-      <h3>ORION — Inventory Intelligence →</h3>
+      <h3>Terminal Cockpit Redesign →</h3>
     </div>
-    <a href="orion.html" class="btn btn-dark">View →</a>
+    <a href="shell-cockpit.html" class="btn btn-dark">View →</a>
   </div>
 </section>
 

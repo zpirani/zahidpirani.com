@@ -8,8 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
-
-<script src="https://mcp.figma.com/mcp/html-to-design/capture.js"></script>
 </head>
 <body>
 <div id="site-nav"></div>
@@ -17,112 +15,170 @@
 <section class="cs-hero">
   <div class="wrap">
     <div class="eyebrow">
-      <span>Axi · 2022–2025</span>
-      <span>Design System</span>
-      <span>Governance</span>
+      <span class="tag accent">Axi · Nov 2022 – Oct 2025</span>
+      <span class="tag accent" style="margin-left:8px;">Design System</span>
+      <span class="tag accent" style="margin-left:8px;">4 products</span>
     </div>
     <h1>Axi Design System</h1>
-    <p class="lead">Built and maintained a scalable design system across 4 engineering teams in 3 countries — enabling faster product delivery, cross-team alignment, and consistent experiences across all Axi products globally.</p>
+    <p class="lead">Unified component library and design language across 4 products — ATP mobile, ATP web, ATP Crypto, and the Client Portal.</p>
     <div class="cs-meta">
       <div class="meta-item"><label>Company</label><span>Axi</span></div>
       <div class="meta-item"><label>Role</label><span>Senior Product Designer</span></div>
-      <div class="meta-item"><label>Teams</label><span>4 Engineering Teams · UK, India, Philippines</span></div>
-      <div class="meta-item"><label>Scope</label><span>iOS · Android · Web · Client Portal</span></div>
+      <div class="meta-item"><label>Tenure</label><span>3 years</span></div>
+      <div class="meta-item"><label>Team</label><span>4 designers + 4 developers</span></div>
+      <div class="meta-item"><label>Localisation</label><span>12 languages via Lokalise</span></div>
     </div>
   </div>
 </section>
 
 <div class="cs-hero-img">
-  <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=1400&h=560&fit=crop&auto=format&q=80" alt="Axi Design System — component library and governance" loading="lazy">
+  <img src="https://placehold.co/1400x560/1D1F28/8080A0?text=Hero+%E2%80%94+Axi+Design+System" alt="Placeholder — Axi Design System: component library overview across mobile, web, crypto, and Client Portal" loading="lazy">
 </div>
 
 <div class="cs-body">
   <div class="wrap-narrow">
 
-    <h2>Overview</h2>
-    <p>Axi's product portfolio spans iOS, Android, Web, and a Client Portal — built by 4 engineering teams across 3 countries. Without a shared design language, teams were rebuilding components independently, creating inconsistencies that slowed delivery and eroded product quality.</p>
-    <p>I built, maintained, and evolved the Axi Design System to give every team a single source of truth for components, patterns, and interaction standards.</p>
-
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">axi.design / overview</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&h=700&fit=crop&auto=format&q=80" alt="Axi Design System — homepage showing component library at a glance" loading="lazy">
-      </div>
-      <p class="mockup-caption">Design system homepage — single source of truth for 4 engineering teams across UK, India, and the Philippines</p>
+    <div class="cs-stat-row">
+      <div class="cs-stat"><div class="num">4</div><div class="label">Active products</div></div>
+      <div class="cs-stat"><div class="num">12</div><div class="label">Languages via Lokalise</div></div>
+      <div class="cs-stat"><div class="num">AA</div><div class="label">Accessibility baseline</div></div>
     </div>
 
-    <h2>What the System Covers</h2>
+    <p>I joined the Axi Design System team in November 2022 — when the system was being formalised in parallel with the broader ATP product. Over three years, the system grew to govern ATP mobile, ATP web, ATP Crypto, and the Client Portal (V2 and Axi Select) — spanning the entire active product surface area.</p>
+    <p>The team was 4 designers + 4 developers on the system, serving 3 PMs and 4 engineering teams across the UK, India, and the Philippines.</p>
+
+    <h2>Context</h2>
+    <p>Multiple teams at Axi were building across mobile, web, crypto, and account-management products. Without a unified system, each product team risked drifting into its own visual language, its own component patterns, its own definition of "primary button." That drift compounds: it slows delivery, fragments user experience across products, and creates design debt that becomes impossibly expensive to repay later.</p>
+    <p>I joined the Axi Design System team in November 2022 — when the system was being formalised in parallel with the broader ATP product. Over my tenure, the system grew to govern <strong>ATP mobile, ATP web, ATP Crypto, and the Client Portal (V2 and Axi Select)</strong> — spanning the entire active product surface area.</p>
+
+    <h2>The three problems the system had to solve</h2>
+    <ol>
+      <li><strong>Scalability.</strong> Multiple teams building in parallel across multiple products needed a single source of truth for visual and interaction patterns. Without it, every product team would solve the same problem differently — every time.</li>
+      <li><strong>Consistency.</strong> Trading experiences must feel seamless across surfaces. A buy button, a chart annotation, a confirmation modal — these should look and behave identically whether on mobile, web, or inside the Client Portal. Inconsistency erodes trust in a regulated context.</li>
+      <li><strong>Speed and efficiency.</strong> Without shared components, product teams duplicate work. Designers re-design buttons; developers re-implement them. The system had to accelerate delivery, not just constrain it.</li>
+    </ol>
+
+    <h2>The foundations</h2>
+
+    <h3>Atomic design (Brad Frost methodology)</h3>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Atomic+design+diagram" alt="Placeholder — Atoms → molecules → organisms → templates → pages, with Axi components">
+      <figcaption>Atomic design — Atoms → molecules → organisms → templates → pages, with Axi components</figcaption>
+    </figure>
+
+    <p>The system is structured around Brad Frost's <strong>atomic design methodology</strong> — breaking the interface into atoms (basic styles), molecules (small reusable patterns), organisms (more complex composites), templates, and pages.</p>
+    <p>The decision to follow an established methodology rather than invent one was deliberate: it accelerated the system's foundation, gave designers and developers a shared vocabulary, and made onboarding new team members faster.</p>
+
+    <h3>8-point grid system</h3>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=8-point+grid" alt="Placeholder — Spacing, sizing, alignment examples">
+      <figcaption>8-point grid — spacing, sizing, alignment examples</figcaption>
+    </figure>
+
+    <p>Every dimension, padding, and margin in the system is a multiple of 8. This rule covers spacing, sizing, and alignment — and creates visual consistency that designers don't have to consciously enforce on every screen.</p>
+
+    <h3>Accessible colour and typography (AA-compliant)</h3>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Colour+%2B+typography+system" alt="Placeholder — AA-compliant palette + type scale">
+      <figcaption>Colour + typography system — AA-compliant palette + type scale</figcaption>
+    </figure>
+
+    <p>The colour palette was tuned against Material Design's accessibility research to maintain <strong>AA contrast ratios</strong> across all states (default, hover, disabled, focused, selected, error). Typography followed the same discipline — type pairings, sizes, and weights chosen for legibility across the full system rather than aesthetic preference.</p>
+
+    <h2>The system in practice</h2>
+
+    <h3>Component library</h3>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Component+library" alt="Placeholder — Storybook overview with atoms, molecules, organisms">
+      <figcaption>Component library — Storybook overview with atoms, molecules, organisms</figcaption>
+    </figure>
+
+    <p>The component library spans mobile and web — atoms, molecules, organisms — with usage guidelines and accessibility annotations for each. Components are tied to a <strong>Storybook</strong> implementation that engineering teams use directly.</p>
+
+    <!--
+    [Component library specifics — to fill]
+    - Approximate component count
+    - Component categories — which are most-used vs. least-used?
+    - Mobile-specific vs. web-specific vs. cross-platform — how is the split managed?
+    - Versioning approach — semver, deprecation policy?
+    - Storybook implementation — engineering ownership or design-driven?
+    -->
+
+    <h3>Cross-product consistency</h3>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Cross-product+consistency" alt="Placeholder — Same components across ATP Mobile, ATP Web, ATP Crypto, Client Portal">
+      <figcaption>Cross-product consistency — same components across ATP Mobile, ATP Web, ATP Crypto, Client Portal</figcaption>
+    </figure>
+
+    <p>The Axi Design System serves ATP (mobile + web), ATP Crypto, and the Client Portal (V2 and Axi Select). The same components power onboarding flows that satisfy 180+ jurisdictions and the order ticket that handles leveraged Perpetual Futures.</p>
+
+    <!--
+    [Cross-product specifics — to fill]
+    - How do you handle product-specific needs? (Theming? Variants? Feature flags?)
+    - What was the hardest cross-product reconciliation you had to navigate?
+    - How does the system handle the difference between consumer trading (high density, fast updates) and account management (lower density, slower interactions)?
+    -->
+
+    <h3>Governance and process</h3>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Governance+flow" alt="Placeholder — Component proposal → review → build → release">
+      <figcaption>Governance flow — component proposal → review → build → release</figcaption>
+    </figure>
+
+    <!--
+    [Governance — to fill]
+    - How does a new component get added — design proposal, review, engineering input?
+    - Who has commit access — designers, developers, both?
+    - How are conflicts resolved when product teams want product-specific variants?
+    - How do you measure adoption — % of designs using system components, story coverage?
+    -->
+
+    <h3>Lokalise integration</h3>
+    <figure class="cs-img reveal">
+      <img src="https://placehold.co/1400x700/1D1F28/8080A0?text=Lokalise" alt="Placeholder — Component-level localisation across 12 languages">
+      <figcaption>Lokalise — component-level localisation across 12 languages</figcaption>
+    </figure>
+
+    <p>Lokalise was a major leadership contribution noted in my Performance Review — I led the implementation across all designs to support different languages.</p>
+
+    <!--
+    [Lokalise — to fill]
+    - Did Lokalise integrate at the component level, or only at the design-spec level?
+    - How did the system handle text expansion / contraction across 12 languages?
+    - RTL support, currency formatting, regional copy variants — how were these governed?
+    - The hardest single localisation decision
+    -->
+
+    <h2>Outcomes</h2>
     <ul>
-      <li><strong>Foundations</strong> — colour, typography, spacing, motion, and iconography tokens</li>
-      <li><strong>Core components</strong> — buttons, inputs, tables, charts, modals, and navigation patterns</li>
-      <li><strong>Trading-specific patterns</strong> — order tickets, position cards, price tickers, P&amp;L indicators, and candlestick chart wrappers</li>
-      <li><strong>Platform variants</strong> — mobile-specific and desktop-specific adaptations of shared components</li>
-      <li><strong>Localisation</strong> — components designed to accommodate 12 languages including RTL layouts</li>
+      <li><strong>System spans 4 active products</strong> — ATP mobile, ATP web, ATP Crypto, Client Portal — with one design language and one component library</li>
+      <li><strong>4 designers + 4 developers</strong> on the system team, supporting 3 PMs and 4 engineering teams across UK, India, Philippines</li>
+      <li><strong>12 languages</strong> localised via Lokalise integration with the system</li>
+      <li><strong>AA accessibility compliance</strong> maintained across colour and typography systems</li>
     </ul>
 
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">axi.design / tokens / colour / semantic</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=700&fit=crop&auto=format&q=80" alt="Axi Design System — colour and typography token documentation" loading="lazy">
-      </div>
-      <p class="mockup-caption">Foundation tokens — semantic colour, type scale, and spacing documented with platform-specific values</p>
-    </div>
+    <h2>Reflection</h2>
+    <!--
+    [Reflection — write 2–3 paragraphs in your voice]
+    - What working on a design system across multiple products taught you about governance vs. autonomy
+    - The hardest design system decision (a Brad Frost call? A colour-system choice? A Storybook adoption push?)
+    - What you'd do differently if starting the system today (design tokens? tighter Figma-to-code? automated accessibility audits?)
+    - How the systems thinking carries forward into your TPC / Shell work, where you're now contributing to Shell Design System 2.0
+    -->
+    <p style="color: var(--muted-lt); font-style: italic;">Reflection to be drafted.</p>
 
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">axi.design / components / trading / order-ticket</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=700&fit=crop&auto=format&q=80" alt="Axi Design System — order ticket component with all variants and states" loading="lazy">
-      </div>
-      <p class="mockup-caption">Order ticket component — all variants, states, and interaction specs for web and mobile implementations</p>
-    </div>
-
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">axi.design / components / trading / price-ticker</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&h=700&fit=crop&auto=format&q=80" alt="Axi Design System — price ticker and P&L indicator components" loading="lazy">
-      </div>
-      <p class="mockup-caption">Trading-specific components — price tickers, P&amp;L indicators, and candlestick chart wrappers with usage guidelines</p>
-    </div>
-
-    <h2>Governance</h2>
-    <p>A design system is only as good as its adoption. I established contribution guidelines that allowed product teams to propose new components, documented usage and anti-patterns for every component, and ran regular alignment sessions with engineering leads to ensure design and code stayed in sync.</p>
-
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">axi.design / contribute / proposal / new-component</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1602576666092-bf6447a729fc?w=1200&h=700&fit=crop&auto=format&q=80" alt="Axi Design System — component contribution workflow and review process" loading="lazy">
-      </div>
-      <p class="mockup-caption">Contribution workflow — structured proposal process for new components, with review, approval, and documentation gates</p>
-    </div>
-
-    <h2>Outcome</h2>
-    <p>The design system became the backbone of Axi's product development. New features that previously required weeks of design and engineering groundwork could be assembled from existing components in a fraction of the time. Cross-team consistency improved measurably — and when Axi Crypto and the ATP Mobile redesign launched, they were built almost entirely on system components.</p>
-
-    <div class="cs-mockup-full reveal">
-      <div class="mockup-browser">
-        <div class="m-bar">
-          <div class="m-dots"><span></span><span></span><span></span></div>
-          <div class="m-url">trade.axi.com / platform / forex / EURUSD</div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=700&fit=crop&auto=format&q=80" alt="Axi Design System — system components in production on the ATP Web platform" loading="lazy">
-      </div>
-      <p class="mockup-caption">System in production — ATP Web, ATP Mobile, and Axi Crypto all built from shared design system components</p>
-    </div>
+    <!--
+    [Open items]
+    1. Clarify your specific role within the 4-designer team. "Key contributor" is fine but be ready to name what you owned.
+    2. Component library specifics — count, categories, versioning approach.
+    3. Cross-product reconciliation stories — at least one concrete example.
+    4. Governance model — process for adding/changing components.
+    5. Lokalise integration depth — how it sits inside the system.
+    6. Hunt for adoption metrics — even rough ones make this case study significantly stronger.
+    7. Reflection in your voice.
+    8. Swap in real hero visuals for each placeholder.
+    9. Cross-references to all other Axi case studies — the design system is the connective tissue across them.
+    -->
 
   </div>
 </div>
@@ -131,9 +187,9 @@
   <div class="inner">
     <div>
       <p>Next case study</p>
-      <h3>GoldPesa Uniswap DApp →</h3>
+      <h3>GoldPesa →</h3>
     </div>
-    <a href="goldpesa-uniswap.html" class="btn btn-dark">View →</a>
+    <a href="goldpesa.html" class="btn btn-dark">View →</a>
   </div>
 </section>
 
