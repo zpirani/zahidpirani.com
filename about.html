@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>About — Zahid Pirani</title>
-<meta name="description" content="Senior Product Designer with 8+ years across fintech, retail trading, and banking. London, UK.">
+<meta name="description" content="Senior Product Designer. Product Design Leader with 10 years across Fintech and Trading. London, UK.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -58,7 +58,7 @@
   margin-bottom: 36px;
 }
 
-/* Skills */
+/* Expertise (3-col) */
 .cv-skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -69,11 +69,6 @@
   font-size: 12px; font-weight: 700;
   margin-bottom: 14px;
 }
-.cv-skill-col .cv-skill-cat {
-  font-size: 13px; font-weight: 400;
-  margin-bottom: 12px;
-  color: #15171E;
-}
 .cv-skill-col ul { list-style: none; padding: 0; margin: 0; }
 .cv-skill-col ul li {
   padding-left: 14px; position: relative;
@@ -83,72 +78,20 @@
   content: "•"; position: absolute; left: 0; color: #15171E;
 }
 
-/* Experience */
-.cv-job {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  padding: 32px 0;
-  border-top: 1px solid #E5E5E7;
+/* Contact links (single full-width column) */
+.cv-links {
+  /* lives inside .cv-section; uses its own padding rather than the H2-mb-36 spacing */
 }
-.cv-job:first-of-type { border-top: none; padding-top: 0; }
-@media (max-width: 768px) { .cv-job { grid-template-columns: 1fr; gap: 18px; } }
-
-.cv-job-meta .cv-role { font-size: 13px; font-weight: 700; margin-bottom: 14px; }
-.cv-job-meta .cv-co a { color: #15171E; text-decoration: none; font-weight: 600; }
-.cv-job-meta .cv-co a:hover { opacity: 0.7; }
-.cv-job-meta .cv-co::after { content: " ↗"; font-size: 11px; color: #15171E; opacity: 0.6; }
-.cv-job-meta .cv-period,
-.cv-job-meta .cv-loc { font-size: 13px; color: #15171E; }
-.cv-job-meta .cv-logo {
-  width: 66px; height: 66px; margin-top: 16px;
-  border-radius: 4px;
-  background: #E5E5E7;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Inter', sans-serif; font-weight: 800; font-size: 16px;
-  color: #fff;
-}
-.cv-logo-shell { background: #FBCE07 !important; color: #DD1D21 !important; }
-.cv-logo-axi { background: #E5453D !important; color: #fff !important; font-style: italic; font-size: 18px; }
-.cv-logo-goldpesa { background: #1A1A1A !important; color: #D6A93A !important; border-radius: 50% !important; }
-
-.cv-job-content ul { list-style: none; padding: 0; margin: 0; }
-.cv-job-content ul li {
-  padding-left: 14px; position: relative;
-  margin-bottom: 12px; font-size: 13px;
-  line-height: 1.55;
-}
-.cv-job-content ul li::before {
-  content: "•"; position: absolute; left: 0; color: #15171E;
-}
-
-/* Education */
-.cv-edu-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-@media (max-width: 768px) { .cv-edu-grid { grid-template-columns: 1fr; gap: 18px; } }
-.cv-edu-grid p { font-size: 13px; margin: 0; }
-.cv-edu-grid .cv-degree { font-weight: 600; margin-bottom: 4px; }
-
-/* Links (2-up contact) */
-.cv-links-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-@media (max-width: 768px) { .cv-links-grid { grid-template-columns: 1fr; gap: 0; } }
-.cv-links-col a {
+.cv-links a {
   display: block;
   font-size: 13px; color: #15171E;
   text-decoration: none;
   padding: 14px 0;
   border-bottom: 1px solid #E5E5E7;
 }
-.cv-links-col a:first-child { border-top: 1px solid #E5E5E7; }
-.cv-links-col a:hover { opacity: 0.6; }
-.cv-links-col a::after { content: " ↗"; font-size: 11px; opacity: 0.6; }
+.cv-links a:first-child { border-top: 1px solid #E5E5E7; }
+.cv-links a:hover { opacity: 0.6; }
+.cv-links a::after { content: " ↗"; font-size: 11px; opacity: 0.6; }
 
 /* Footer */
 .cv-footer {
@@ -171,133 +114,66 @@
   <section class="cv-bio">
     <h1>Senior Product Designer</h1>
     <div class="cv-tagline">Energy Trading, Crypto, Onboarding, Conversion &amp; Client Experience at Scale</div>
-    <p>A seasoned Senior Product Design leader with 8+ years of experience across fintech, retail trading, and banking.</p>
+    <p>Product Design Leader with 10 years across Fintech and Trading. Driven by a curiosity for the craft of building scalable systems that solve business challenges.</p>
     <ul>
       <li>Led a team of 3 Designers and collaborated with 4 engineering teams across the UK, India, and the Philippines.</li>
       <li>Worked with cross functional teams to create a cohesive onboarding process that complies with regulations in over 180 countries, including FCA, CySEC, ASIC, DFSA, and FMA.</li>
-      <li>Delivered end to end journeys for the ATP Crypto (iOS, Android), ATP Web, Client Portal, now live in 150+ countries.</li>
+      <li>Delivered end to end journeys for the Axi Trading Platform (iOS, Android), ATP Web, Client Portal, now live in 150+ countries.</li>
       <li>Launched a new onboarding flow and streamlined KYC, IDV, and compliance, resulting in 2× conversion uplift across Direct, Affiliate, and IB channels.</li>
     </ul>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- EXPERTISE -->
   <section class="cv-section">
-    <h2>Experience</h2>
-
-    <div class="cv-job">
-      <div class="cv-job-meta">
-        <div class="cv-role">Senior Product Designer</div>
-        <div class="cv-co"><a href="https://shell.com" target="_blank" rel="noopener">Shell</a></div>
-        <div class="cv-period">Nov 2025 – Present</div>
-        <div class="cv-loc">London, UK</div>
-        <div class="cv-logo cv-logo-shell">Shell</div>
-      </div>
-      <div class="cv-job-content">
-        <ul>
-          <li>End-to-End Product Discovery: Lead design and analysis for the Terminal Performance Center, unifying data for Shell's terminal and LNG businesses.</li>
-          <li>Project Orion: Spearheaded design for a real-time inventory dashboard, providing instant access to inventory positions and capacity.</li>
-          <li>Requirements Elicitation: Facilitate workshops to define "Data Foundations" requirements, translating needs into PRDs and user stories.</li>
-          <li>Multi-Persona UX: Designed navigation for diverse personas, ensuring seamless access from global views to terminal asset status.</li>
-          <li>Cross-Functional Alignment: Collaborate with Product Owners and Engineering to manage the backlog, aligning design solutions with business goals.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-job">
-      <div class="cv-job-meta">
-        <div class="cv-role">Senior Product Designer</div>
-        <div class="cv-co"><a href="https://axi.com" target="_blank" rel="noopener">Axi</a></div>
-        <div class="cv-period">November 2022 – November 2025</div>
-        <div class="cv-loc">London, UK</div>
-        <div class="cv-logo cv-logo-axi">axi</div>
-      </div>
-      <div class="cv-job-content">
-        <ul>
-          <li>Designed and launched trading experiences for Crypto Perpetual Futures, increasing platform usability scores by 22%.</li>
-          <li>Revamped CFD trading interfaces (Forex, Commodities, Indices, Crypto, Shares) using modular design principles, improving design consistency and development speed.</li>
-          <li>Improved onboarding across multiple jurisdictions (FCA, CySec, ASIC), reducing account setup time by 35%.</li>
-          <li>Partnered with PMs and engineers to align product vision and ensure scalable design standards.</li>
-          <li>Maintained and evolved a scalable design system, enabling faster product delivery and cross-team alignment.</li>
-          <li>Led user research and usability testing with 100+ participants, uncovering key pain points that directly shaped feature design and improved overall usability.</li>
-          <li>Implemented localization for 12 languages, expanding global adoption and accessibility.</li>
-          <li>Facilitated design workshops to guide product strategy and unify stakeholder vision.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-job">
-      <div class="cv-job-meta">
-        <div class="cv-role">Lead Product Designer</div>
-        <div class="cv-co"><a href="https://goldpesa.com" target="_blank" rel="noopener">GoldPesa</a></div>
-        <div class="cv-period">January 2020 – October 2022</div>
-        <div class="cv-loc">London, UK</div>
-        <div class="cv-logo cv-logo-goldpesa">G</div>
-      </div>
-      <div class="cv-job-content">
-        <ul>
-          <li>Led design of the GoldPesa DApp to launch GPO, an ERC20 token, and decentralized trading features using Uniswap.</li>
-          <li>Designed intuitive Web3 interfaces for bridging, staking, and swapping tokens, contributing to 2,000+ new users onboarded within the first 30 days.</li>
-          <li>Conducted usability testing with 30+ users, gathering insights that directly shaped feature design.</li>
-          <li>Created wireframes, user flows, and personas to align stakeholders and engineers.</li>
-          <li>Researched 100+ gold-backed cryptocurrencies to inform product-market fit.</li>
-          <li>Collaborated on brand strategy and marketing campaigns, helping secure "Best DeFi Project" award at Crypto Expo Dubai (2022).</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="cv-section">
-    <h2>Skills</h2>
+    <h2>Expertise</h2>
     <div class="cv-skills-grid">
       <div class="cv-skill-col">
-        <h3>Senior Product Designer</h3>
-        <div class="cv-skill-cat">Project Management</div>
+        <h3>Skills</h3>
         <ul>
-          <li>Budget Management &amp; Forecasting</li>
-          <li>Timeline Development &amp; Execution</li>
-          <li>Vendor &amp; Contract Negotiation</li>
-          <li>On-Site Production Management</li>
+          <li>AI-Assisted Design &amp; Workflows</li>
+          <li>Service Design</li>
+          <li>Design Thinking</li>
+          <li>Journey Mapping / Wireframing</li>
+          <li>Information Architecture</li>
+          <li>Design System Management</li>
+          <li>Rapid Prototyping</li>
+          <li>Stakeholder Management</li>
+          <li>Requirements Elicitation</li>
         </ul>
       </div>
       <div class="cv-skill-col">
-        <h3>Senior Product Designer</h3>
-        <div class="cv-skill-cat">Communication &amp; Collaboration</div>
+        <h3>Tools</h3>
         <ul>
-          <li>Cross-Functional Team Leadership</li>
-          <li>Client Relationship Management</li>
-          <li>Stakeholder Communication</li>
+          <li>Figma Suite</li>
+          <li>Model Context Protocol (MCP)</li>
+          <li>Claude Code / Replit</li>
+          <li>Pencil.Dev / Cursor / Lovable</li>
+          <li>Bolt / v0 / Base44</li>
+          <li>Framer / Azure DevOps</li>
+          <li>Lokalise / UserTesting</li>
+          <li>Amplitude / Browser Stack</li>
         </ul>
       </div>
       <div class="cv-skill-col">
-        <h3>Senior Product Designer</h3>
-        <div class="cv-skill-cat">Strategic &amp; Creative Oversight</div>
+        <h3>Domain</h3>
         <ul>
-          <li>Creative Strategy Development</li>
-          <li>Talent Relations &amp; Management</li>
-          <li>Creative Direction Oversight</li>
-          <li>Brand Alignment</li>
+          <li>Energy Trading</li>
+          <li>Fintech</li>
+          <li>SaaS Platforms</li>
+          <li>Web3</li>
+          <li>CFD &amp; Forex/OTC Trading</li>
+          <li>Cryptocurrencies</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- LINKS -->
-  <section class="cv-section">
-    <div class="cv-links-grid">
-      <div class="cv-links-col">
-        <a href="mailto:zahid@zpirani.com">zahid@zpirani.com</a>
-        <a href="tel:+447377598065">07377 598065</a>
-        <a href="https://linkedin.com/in/zahidpirani" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener">Resume</a>
-      </div>
-      <div class="cv-links-col">
-        <a href="mailto:zahid@zpirani.com">zahid@zpirani.com</a>
-        <a href="tel:+447377598065">07377 598065</a>
-        <a href="https://linkedin.com/in/zahidpirani" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener">Resume</a>
-      </div>
-    </div>
+  <section class="cv-section cv-links">
+    <a href="mailto:zahid@zpirani.com">zahid@zpirani.com</a>
+    <a href="tel:+447377598065">07377 598065</a>
+    <a href="https://linkedin.com/in/zahidpirani" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="#" target="_blank" rel="noopener">Resume</a>
   </section>
 
   <!-- FOOTER -->
