@@ -32,7 +32,7 @@
 <nav class="top">
   <div class="inner">
     <a href="${root}index.html" class="mark mark-wordmark" aria-label="Zahid Pirani — home">
-      <span>ZAHID PIRANI</span>
+      <img src="${root}assets/zplogo.svg" alt="Zahid Pirani" class="mark-logo">
     </a>
     <ul class="links" id="nav-links">
       <li><a href="${root}index.html" data-p="index">Work</a></li>

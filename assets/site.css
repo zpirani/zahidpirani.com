@@ -85,6 +85,10 @@ nav.top .mark-wordmark span {
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
+nav.top .mark-logo {
+  display: block;
+  height: 11px; width: auto;
+}
 
 /* Nav links */
 nav.top .links {
