@@ -78,6 +78,13 @@ nav.top .mark span {
   font-family: 'Schibsted Grotesk', system-ui, sans-serif;
   font-size: 14px; font-weight: 700; letter-spacing: -0.02em;
 }
+nav.top .mark-wordmark { gap: 0; }
+nav.top .mark-wordmark span {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
 
 /* Nav links */
 nav.top .links {
