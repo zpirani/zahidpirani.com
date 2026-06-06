@@ -56,7 +56,6 @@
       </li>
       <li><a href="${root}work/goldpesa.html">GoldPesa</a></li>
       <li><a href="${root}about.html" data-p="about">About</a></li>
-      <li><a href="${root}skills.html" data-p="skills">Skills</a></li>
       <li class="mobile-cta"><a href="mailto:zahid@zpirani.com">Get in touch →</a></li>
     </ul>
     <a href="mailto:zahid@zpirani.com" class="cta">Get in touch</a>
