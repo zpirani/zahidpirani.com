@@ -1,8 +1,8 @@
 // Password protection via HTTP Basic Auth (Vercel Edge Middleware).
-// To change credentials: edit USERNAME / PASSWORD below and push.
+// Password-only — username field can be left blank (or any value).
+// To change the password: edit PASSWORD below and push.
 // To disable: delete this file (or rename it) and push.
 
-const USERNAME = 'zahid';
 const PASSWORD = 'Build2026';
 
 export const config = {
@@ -16,9 +16,8 @@ export default function middleware(request) {
     try {
       const decoded = atob(authHeader.slice(6));
       const colon = decoded.indexOf(':');
-      const user = decoded.slice(0, colon);
-      const pass = decoded.slice(colon + 1);
-      if (user === USERNAME && pass === PASSWORD) return;
+      const pass = colon === -1 ? decoded : decoded.slice(colon + 1);
+      if (pass === PASSWORD) return; // username ignored — password only
     } catch (_) {
       // fall through to 401
     }
