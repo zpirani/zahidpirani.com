@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080F1E"/>
+      <stop offset="0.45" stop-color="#0E2444"/>
+      <stop offset="1" stop-color="#163666"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="750" fill="url(#bg)"/>
+
+  <!-- Faint baseline grid -->
+  <g stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1">
+    <line x1="100" y1="500" x2="900" y2="500"/>
+    <line x1="100" y1="425" x2="900" y2="425"/>
+    <line x1="100" y1="350" x2="900" y2="350"/>
+    <line x1="100" y1="275" x2="900" y2="275"/>
+    <line x1="100" y1="200" x2="900" y2="200"/>
+  </g>
+
+  <!-- Trending chart line in Shell yellow -->
+  <polyline points="120,460 230,425 340,440 450,360 560,310 670,285 780,230 880,180"
+            fill="none" stroke="#FBCE07" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Endpoint dots -->
+  <circle cx="120" cy="460" r="5" fill="#FBCE07"/>
+  <circle cx="880" cy="180" r="6" fill="#FBCE07"/>
+  <circle cx="880" cy="180" r="14" fill="#FBCE07" fill-opacity="0.18"/>
+</svg>
